@@ -286,7 +286,7 @@ header {
 
     .smart-overlay-list-top ul>li>ul,
     .smart-overlay-list-bottom ul>li>ul {
-        color: var(--black-400);
+        color: var(--black-600);
     }
 
     .smart-overlay-list-bottom {
