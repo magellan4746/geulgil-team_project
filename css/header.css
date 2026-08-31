@@ -11,6 +11,7 @@ header {
     &>.common-frame {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 1rem 3rem;
     }
 
@@ -65,6 +66,7 @@ header {
     font-weight: var(--fw2);
 
 }
+
 
 .gnb>li:nth-of-type(1):hover .gnb2depth {
     display: block;
@@ -140,76 +142,114 @@ header {
     display: block;
 }
 
-/* .smart-header, .smart-overlay-menu{
+.smart-header, .smart-overlay-menu{
     display: none;
-} */
+}
 
 @media(max-width:1024px) {
     .pc {
         display: none;
     }
+    .smart-header, .smart-overlay-menu{
+    display: block;
+}
+    .header-top>.common-frame {
+        padding: 1rem 2rem;
 
-    .smart-header {
-        display: block;
     }
 
-    .smart-header-top {
-        &>.common-frame {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
+    .smart-header {
+        position: relative;
+        z-index: 20;
+    }
 
-        .logo img {
-            height: 4rem;
-        }
+    .smart-menu {
+        position: relative;
+        z-index: 30;
+    }
 
+    .smart-menu>a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+    }
+
+    .smart-header-top>.common-frame {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .logo img {
+        height: 3rem;
+    }
+
+    .smart-menu>a img {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .smart-header-bottom {
         background-color: var(--white-0);
-        
+
         padding: 0.2rem 0;
     }
 
     .smart-overlay-menu {
-        position: relative;
-        
-    }
-
-    
-    .smart-overlay-menu>.overlay-menu-wrap
-     {
         position: fixed;
-        left: 0;
-        top:0;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+        z-index: 200;
+
     }
 
     .smart-overlay-menu.is-open {
-        visibility: visible;
         opacity: 1;
+        visibility: visible;
         pointer-events: auto;
     }
 
-   
+    .smart-overlay-menu>.overlay-menu-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        background: #fff;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+
+    }
+
+    .smart-overlay-menu.is-open .overlay-menu-wrap {
+        transform: translateX(0);
+    }
 
 
     .smart-overlay-menu .dropdown-list {
         display: none;
     }
 
-    .smart-overlay-login{
+    .smart-overlay-login {
         background-color: var(--black-700);
     }
-    .smart-overlay-list{
+
+    .smart-overlay-list {
         background-color: #fff;
     }
+
     .smart-overlay-login .common-frame {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
         padding: 1rem 2rem;
     }
 
@@ -221,6 +261,7 @@ header {
         font-size: var(--fs-body1);
 
     }
+    
 
     .btn-login>a {
         color: #259DFF;
@@ -245,7 +286,7 @@ header {
 
     .smart-overlay-list-top ul>li>ul,
     .smart-overlay-list-bottom ul>li>ul {
-        color: var(--black-400);
+        color: var(--black-600);
     }
 
     .smart-overlay-list-bottom {
@@ -262,11 +303,38 @@ header {
         align-items: center;
     }
 
-    
-}
-@media(max-width:768px){
-    .logo img {
-            height: 3rem;
-        }
 
+}
+
+
+
+@media(max-width:768px) {
+    .logo img {
+        height: 3rem;
+    }
+
+    .header-top>.common-frame {
+        padding: 1rem 1rem;
+
+    }
+
+    .smart-overlay-login .common-frame {
+        padding: 1rem 1rem;
+    }
+
+}
+
+@media (max-width: 382px) {
+
+    .smart-header-bottom .gnb,
+    .smart-overlay-login .common-frame,
+    .smart-overlay-login .login-tab,
+    .smart-overlay-list-top ul,
+    .smart-overlay-list-bottom ul {
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
 }
