@@ -1,27 +1,47 @@
 const menuItems = Array.from(document.querySelectorAll('.gnb > li'));
 
+function setMenuIcon(toggle, isOpen) {
+    if (!toggle) return;
+
+    const img = toggle.querySelector('img');
+    if (!img) return;
+
+    const closedSrc = toggle.dataset.closedSrc || './img/icn_menu.svg';
+    const openSrc = toggle.dataset.openSrc || './img/icn-close.svg';
+    img.src = isOpen ? openSrc : closedSrc;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? '전체 메뉴 닫기' : '전체 메뉴 열기');
+}
+
 // Toggle .open on click for items that have a .gnb2depth
 menuItems.forEach(li => {
     const hasDepth = li.querySelector('.gnb2depth');
-    const toggle = li.querySelector('a');
+    const toggle = li.querySelector('.menu-toggle');
     if (!hasDepth || !toggle) return;
+
+    setMenuIcon(toggle, false);
 
     toggle.addEventListener('click', function(e) {
         e.preventDefault();
-        // Toggle open state
-        li.classList.toggle('open');
+        const isOpen = li.classList.toggle('open');
+        setMenuIcon(toggle, isOpen);
     });
 
     // Close when mouse leaves the li area
     li.addEventListener('mouseleave', function() {
         li.classList.remove('open');
+        setMenuIcon(toggle, false);
     });
 });
 
 // Click outside closes any open menus
 document.addEventListener('click', function(e) {
     menuItems.forEach(li => {
-        if (!li.contains(e.target)) li.classList.remove('open');
+        const toggle = li.querySelector('.menu-toggle');
+        if (!li.contains(e.target)) {
+            li.classList.remove('open');
+            setMenuIcon(toggle, false);
+        }
     });
 });
 
