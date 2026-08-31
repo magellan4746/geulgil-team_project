@@ -174,18 +174,16 @@ header {
     }
 
     .smart-overlay-menu {
-        
         position: relative;
         
     }
 
     
-    .smart-overlay-menu>.overlay-menu-wrap{
-        width: 80%;
+    .smart-overlay-menu>.overlay-menu-wrap
+     {
         position: fixed;
         left: 0;
         top:0;
-        z-index: 100;
     }
 
     .smart-overlay-menu.is-open {
@@ -193,6 +191,9 @@ header {
         opacity: 1;
         pointer-events: auto;
     }
+
+   
+
 
     .smart-overlay-menu .dropdown-list {
         display: none;
