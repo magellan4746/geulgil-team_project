@@ -66,7 +66,14 @@ header {
     font-weight: var(--fw2);
 
 }
-
+.gnb>li.open .gnb2depth,
+.gnb>li:focus-within .gnb2depth,
+.gnb>li:hover .gnb2depth {
+    max-height: 900px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
 
 .gnb>li:nth-of-type(1):hover .gnb2depth {
     display: block;
@@ -143,6 +150,7 @@ header {
         transform 0.25s ease;
     pointer-events: none;
 }
+
 
 
 .gnb>li.open .gnb2depth,
@@ -365,4 +373,12 @@ header {
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
     }
+}
+
+/* 메뉴 버튼을 다시 눌러 닫은 상태는 hover 중에도 유지 */
+.gnb>li.menu-closed .gnb2depth {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
 }

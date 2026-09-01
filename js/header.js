@@ -18,21 +18,22 @@ function setMenuToggleIcon(toggle, open) {
 // Toggle .open on click for items that have a .gnb2depth
 menuItems.forEach(li => {
     const hasDepth = li.querySelector('.gnb2depth');
-    const toggle = li.querySelector('a');
+    const toggle = li.querySelector('.menu-toggle');
     if (!hasDepth || !toggle) return;
 
     setMenuToggleIcon(toggle, li.classList.contains('open'));
 
-    toggle.addEventListener('click', function(e) {
+    toggle.addEventListener('click', function (e) {
         e.preventDefault();
+
         const isOpen = li.classList.contains('open');
-        li.classList.toggle('open', !isOpen);
-        setMenuToggleIcon(toggle, !isOpen);
+        li.classList.toggle('menu-closed', isOpen);
+        li.classList.toggle('open', !isOpen);  // 열려 있으면 닫기
+        setMenuToggleIcon(toggle, !isOpen);   // 아이콘도 같이 전환
     });
 
-    // Close when mouse leaves the li area
-    li.addEventListener('mouseleave', function() {
-        li.classList.remove('open');
+    li.addEventListener('mouseleave', function () {
+        li.classList.remove('open', 'menu-closed');
         setMenuToggleIcon(toggle, false);
     });
 });
@@ -40,7 +41,10 @@ menuItems.forEach(li => {
 // Click outside closes any open menus
 document.addEventListener('click', function(e) {
     menuItems.forEach(li => {
-        if (!li.contains(e.target)) li.classList.remove('open');
+        if (!li.contains(e.target)) {
+            li.classList.remove('open', 'menu-closed');
+            setMenuToggleIcon(li.querySelector('.menu-toggle'), false);
+        }
     });
 });
 
