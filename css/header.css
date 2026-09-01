@@ -161,7 +161,13 @@ header {
     transform: translateY(0);
     pointer-events: auto;
 }
-
+/* 메뉴 버튼을 다시 눌러 닫은 상태는 hover 중에도 유지 */
+.gnb>li.menu-closed .gnb2depth {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+}
 .smart-header, .smart-overlay-menu{
     display: none;
 }
@@ -376,10 +382,4 @@ header {
     }
 }
 
-/* 메뉴 버튼을 다시 눌러 닫은 상태는 hover 중에도 유지 */
-.gnb>li.menu-closed .gnb2depth {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-8px);
-    pointer-events: none;
-}
+
