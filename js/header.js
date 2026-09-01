@@ -1,20 +1,39 @@
 const menuItems = Array.from(document.querySelectorAll('.gnb > li'));
 
+function setMenuToggleIcon(toggle, open) {
+    if (!toggle) return;
+    const img = toggle.querySelector('img');
+    if (!img) return;
+
+    const openSrc = toggle.getAttribute('data-open-src');
+    const closedSrc = toggle.getAttribute('data-closed-src');
+
+    if (openSrc && closedSrc) {
+        img.src = open ? openSrc : closedSrc;
+    }
+
+    toggle.setAttribute('aria-expanded', String(open));
+}
+
 // Toggle .open on click for items that have a .gnb2depth
 menuItems.forEach(li => {
     const hasDepth = li.querySelector('.gnb2depth');
     const toggle = li.querySelector('a');
     if (!hasDepth || !toggle) return;
 
+    setMenuToggleIcon(toggle, li.classList.contains('open'));
+
     toggle.addEventListener('click', function(e) {
         e.preventDefault();
-        // Toggle open state
-        li.classList.toggle('open');
+        const isOpen = li.classList.contains('open');
+        li.classList.toggle('open', !isOpen);
+        setMenuToggleIcon(toggle, !isOpen);
     });
 
     // Close when mouse leaves the li area
     li.addEventListener('mouseleave', function() {
         li.classList.remove('open');
+        setMenuToggleIcon(toggle, false);
     });
 });
 
