@@ -58,7 +58,11 @@ document.addEventListener('click', function(e) {
         overlay.classList.remove('is-open');
         document.body.style.overflow = '';
         // also collapse any open dropdowns
-        overlay.querySelectorAll('.dropdown-list').forEach(d=> d.style.display = 'none');
+        overlay.querySelectorAll('.dropdown-list').forEach(d => {
+            d.classList.remove('is-open');
+            d.style.maxHeight = '0px';
+            d.style.opacity = '0';
+        });
         // reset all list-tab icons to closed
         overlay.querySelectorAll('.list-tab').forEach(tab => setTabIcon(tab, false));
     }
@@ -92,6 +96,13 @@ document.addEventListener('click', function(e) {
     // dropdown toggles inside overlay + icon swap
     const listTabs = Array.from(overlay.querySelectorAll('.list-tab'));
 
+    function setDropdownState(dropdown, open){
+        if(!dropdown) return;
+        dropdown.classList.toggle('is-open', open);
+        dropdown.style.maxHeight = open ? `${dropdown.scrollHeight}px` : '0px';
+        dropdown.style.opacity = open ? '1' : '0';
+    }
+
     // initialize icons as closed
     listTabs.forEach(tab => setTabIcon(tab, false));
 
@@ -100,19 +111,17 @@ document.addEventListener('click', function(e) {
             e.preventDefault();
             const dropdown = tab.nextElementSibling;
             if(!dropdown) return;
-            const isOpen = dropdown.style.display === 'block';
+            const isOpen = dropdown.classList.contains('is-open');
+
             // close others and reset their icons
-            overlay.querySelectorAll('.dropdown-list').forEach(d=>{
-                d.style.display = 'none';
+            overlay.querySelectorAll('.dropdown-list').forEach(d => {
                 const prev = d.previousElementSibling;
+                const shouldOpen = d === dropdown && !isOpen;
+                setDropdownState(d, shouldOpen);
                 if(prev && prev.classList && prev.classList.contains('list-tab')){
-                    setTabIcon(prev, false);
+                    setTabIcon(prev, shouldOpen);
                 }
             });
-            // toggle this one
-            const willOpen = !isOpen;
-            dropdown.style.display = willOpen ? 'block' : 'none';
-            setTabIcon(tab, willOpen);
         });
     });
 })();

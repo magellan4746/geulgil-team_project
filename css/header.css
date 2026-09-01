@@ -72,6 +72,7 @@ header {
     display: block;
 }
 
+
 .gnb2depth .common-frame {
     display: grid;
     grid-template-columns: repeat(1, 1fr 0.5fr);
@@ -129,17 +130,28 @@ header {
     top: 50px;
     width: 100%;
     background-color: #fff;
-    /* border: 1px solid red; */
     padding: 1.75rem 0;
-    display: none;
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: translateY(-8px);
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        transform 0.25s ease;
+    pointer-events: none;
 }
 
 
 .gnb>li.open .gnb2depth,
 .gnb>li:focus-within .gnb2depth,
 .gnb>li:hover .gnb2depth {
-    display: block;
+    max-height: 900px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .smart-header, .smart-overlay-menu{
@@ -202,7 +214,7 @@ header {
     .smart-overlay-menu {
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(0, 0, 0, 0.50);
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -235,7 +247,23 @@ header {
 
 
     .smart-overlay-menu .dropdown-list {
-        display: none;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        margin-top: 0;
+        padding-top: 0;
+        transition: max-height 0.35s ease, opacity 0.25s ease, margin-top 0.25s ease, padding-top 0.25s ease;
+    }
+
+    .smart-overlay-menu .dropdown-list.is-open {
+        max-height: 40rem;
+        opacity: 1;
+        margin-top: 0.75rem;
+        padding-top: 0.25rem;
+    }
+
+    .smart-overlay-menu .dropdown-list li {
+        margin-top: 0.5rem;
     }
 
     .smart-overlay-login {
