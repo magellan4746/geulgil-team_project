@@ -238,7 +238,7 @@ header {
         position: absolute;
         left: 0;
         top: 0;
-        width: 80%;
+        width: 60%;
         height: 100vh;
         background: #fff;
         transform: translateX(-100%);
@@ -354,6 +354,9 @@ header {
 
     .smart-overlay-login .common-frame {
         padding: 1rem 1rem;
+    }
+    .smart-overlay-menu>.overlay-menu-wrap{
+        width: 70%;
     }
 
 }
