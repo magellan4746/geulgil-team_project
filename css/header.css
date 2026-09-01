@@ -66,19 +66,12 @@ header {
     font-weight: var(--fw2);
 
 }
-.gnb>li.open .gnb2depth,
-.gnb>li:focus-within .gnb2depth,
-.gnb>li:hover .gnb2depth {
+.gnb>li.open .gnb2depth {
     max-height: 900px;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 }
-
-.gnb>li:nth-of-type(1):hover .gnb2depth {
-    display: block;
-}
-
 
 .gnb2depth .common-frame {
     display: grid;
@@ -153,9 +146,7 @@ header {
 
 
 
-.gnb>li.open .gnb2depth,
-.gnb>li:focus-within .gnb2depth,
-.gnb>li:hover .gnb2depth {
+.gnb>li.open .gnb2depth {
     max-height: 900px;
     opacity: 1;
     transform: translateY(0);

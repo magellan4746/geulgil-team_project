@@ -32,10 +32,6 @@ menuItems.forEach(li => {
         setMenuToggleIcon(toggle, !isOpen);   // 아이콘도 같이 전환
     });
 
-    li.addEventListener('mouseleave', function () {
-        li.classList.remove('open', 'menu-closed');
-        setMenuToggleIcon(toggle, false);
-    });
 });
 
 // Click outside closes any open menus
