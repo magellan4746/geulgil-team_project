@@ -1,0 +1,117 @@
+/* 변수 */
+:root{
+    /* 디바이스별 글씨 크기 */
+    --fs-pc:16px;
+    --fs-pad:14px;
+    --fs-mo:12px;
+    
+    /* 행간 */
+    --lh1:1.2;
+    --lh2:1.45;
+    
+    /* 태그 글씨 크기 */
+    --fs-h4:1.25rem;
+    --fs-h3:1.5625rem;
+    --fs-h2:1.9531rem;
+    --fs-h1:2.4414rem;
+    --fs-body1:1rem;
+    --fs-body2:0.85rem;
+    --fs-detail:0.7225rem;
+    
+    /* 글씨 두께 */
+    --fw1:400;
+    --fw2:700;
+
+    /* 여백 */
+    --space-3x-large:6rem;
+    --space-2x-large:3rem;
+    --space-x-large:2rem;
+    --space-normal:1rem;
+    --space-x-small:0.5rem;
+    --space-2x-small:0.25rem;
+    
+    /* 색상 */
+
+    /* 블루 컬러 */
+    --blue-0:#E6E6E6;
+    --blue-100:#C5C6E2;
+    --blue-200:#A5A6DC;
+    --blue-300:#8889D2;
+    --blue-400:#6E70C4;
+    --blue-500:#585AB1;
+    --blue-600:#454697;
+    --blue-700:#323377;
+    --blue-800:#212252;
+    --blue-900:#11112B;
+
+    /* 블랙컬러 */
+    --black-0:#F7F7F7;
+    --black-100:#DCDCDC;
+    --black-200:#C0C0C0;
+    --black-300:#A5A5A5;
+    --black-400:#898989;
+    --black-500:#6E6E6E;
+    --black-600:#525252;
+    --black-700:#373737;
+    --black-800:#1B1B1B;
+    --black-900:#000000;
+
+    --white-0:#fff;
+
+
+    /* 브랜드컬러 */
+    --maincolors-black-bg1:#222831;
+    --maincolors-black-bg2:#393E46;
+    --maincolors-black-greenblue:#00ADB5;
+    --maincolors-black-white:#EEEEEE;
+
+}
+html{
+    font-size: var(--fs-pc);
+    font-family: 'Pretendard',sans-serif;
+    font-weight: var(--fw1);
+    color: var(--gray-900);
+}
+main{
+    margin-top: 154px;
+
+}
+
+.common-frame{
+    padding: 0 var(--space-2x-large);
+}
+
+.pc{display: block;}
+.tab{display: none;}
+.mo{display: none;}
+
+
+h1{font-size: var(--fs-h1);}
+h2{font-size: var(--fs-h2);}
+h3{font-size: var(--fs-h3);}
+h4{font-size: var(--fs-h4);}
+
+@media (max-width:1024px){
+    main{
+        margin-top: 5rem;
+    }
+    .pc{display: none;}
+    .tab{display: block;}
+    .mo{display: none;}
+
+    html{
+        font-size: var(--fs-pad);
+    }
+    .common-frame{
+        padding: 0 var(--space-x-large);
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size: var(--fs-mo);
+    }
+    .common-frame{
+        padding: 0 var(--space-normal);
+    }
+}
