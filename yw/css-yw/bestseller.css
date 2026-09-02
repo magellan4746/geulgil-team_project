@@ -1,0 +1,196 @@
+
+section{
+  padding: var(--space-3x-large) var(--space-2x-large);
+}
+/* 글길 베스트셀러 제목 */
+.bestseller{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-normal);
+}
+.bestseller-header{
+  display: flex;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw2);
+  margin-bottom: 2rem;
+}
+
+.bestseller-period {
+  display: flex;
+  gap: var(--space-normal);
+  margin-bottom: 3rem;
+}
+
+.bestseller-period-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 9rem;
+  height: var(--space-2x-large);
+  box-sizing: border-box;
+
+  color: var(--black-800);
+  background-color: var(--black-100);
+  border: 1px solid var(--black-300);
+  border-radius: 100px;
+
+  font-size: var(--fs-h4);
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.bestseller-period-link:hover {
+  background-color: var(--black-0);
+}
+
+.bestseller-period-link:focus-visible {
+  outline: 3px solid #333;
+  outline-offset: 3px;
+}
+/* 북 리스트 그리드 */
+
+.bestseller-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3x-large) var(--space-normal);
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bestseller-item {
+  min-width: 0;
+}
+
+.book-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+.book-image {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.book-cover {
+  display: block;
+  width: 160px;
+  height: 234px;
+  box-sizing: border-box;
+
+  object-fit: cover;
+  border: 1px solid var(--black-200);
+  border-radius: 8px;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-normal);
+
+  min-width: 0;
+  padding-top: 8px;
+  text-align: left;
+}
+.book-rank,
+.book-title,
+.book-creators,
+.book-publisher {
+  margin: 0;
+}
+.book-rank {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw2);
+  color: #6594E7;
+}
+.book-title{
+  font-size: var(--fs-h4);
+  font-weight: var(--fw2);
+  color: var(--black-600);
+}
+.book-creators {
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: var(--fs-h4);
+  font-weight: var(--fw1);
+  color: var(--black-500);
+}
+.book-publisher{
+  font-size: var(--fs-h4);
+  font-weight: var(--fw1);
+  color: var(--black-300);
+}
+.book-rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.book-rating-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.book-rating-score {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw2);
+  color: var(--black-600);
+}
+
+.book-review-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 32px;
+  padding: 4px 8px;
+
+  background-color: var(--black-100);
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: var(--fs-h4);
+  font-weight: var(--fw1);
+  color: var(--black-400);
+}
+
+.book-review-link:focus-visible {
+  outline: 3px solid #333333;
+  outline-offset: 3px;
+}
+
+/* 태블릿 */
+@media (max-width:1398px){
+  main{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+  .pc{display: none;}
+  .tab{display: block;}
+  .mo{display: none;}
+  html{
+      font-size: var(--fs-pad);
+  }
+  .bestseller-arrow{
+    width: 18px;
+  }
+  .bestseller-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hidden{
+    display: none;
+  }
+
+}
+/* 모바일 */
+@media (max-width: 700px) {
+  .bestseller-list {
+    grid-template-columns: 1fr;
+  }
+}
