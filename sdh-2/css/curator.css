@@ -1,0 +1,77 @@
+
+.con2{
+    margin-bottom: 4rem;
+}
+.section-title{
+    margin-bottom: 4rem;
+}
+
+.section-title-wrap{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.section-maintitle{
+    color: var(--black-600);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw2);
+    margin-bottom: 1.5rem;
+}
+.section-subtitle{
+    color: var(--black-400);
+}
+.con2-cardlist-wrap{
+    width: 22rem;
+    background-color: #405CBA;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.con2-cardlist-wrap>ul{
+    display: flex;
+}
+.con2-q-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 5rem;
+}
+.con2-q-upper{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.con2-badge{
+    color: var(--black-800);
+    background-color: #fff;
+    padding: 0.25rem .5rem;
+    border-radius: 50rem;
+}
+.con2-badge-title{
+    color: #fff;
+    font-size: var(--fs-h4);
+    font-weight: var(--fw2);
+}
+.con2-quest-subt{
+    color: #fff;
+}
+.con2-user-q{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 0.25fr);
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.con2-user-q>.mini-book-cover{
+    border-radius: 0.5rem;
+    
+}
+.con2-user-info-wrap{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.con2-user-id{
+    font-weight: var(--fw2);
+}
