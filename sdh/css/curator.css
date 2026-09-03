@@ -75,3 +75,17 @@
 .con2-user-id{
     font-weight: var(--fw2);
 }
+
+.con3-card-wrap{
+    width: 17.5rem;
+    height: 26.25rem;
+    padding: 2rem;
+    background-color: var(--blue-600);
+    background: url(../img/con3-card-bg-blue.png) no-repeat 50% 50% / cover;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
