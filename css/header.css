@@ -66,6 +66,7 @@ header {
     font-weight: var(--fw2);
 
 }
+
 .gnb>li.open .gnb2depth {
     max-height: 900px;
     opacity: 1;
@@ -152,6 +153,7 @@ header {
     transform: translateY(0);
     pointer-events: auto;
 }
+
 /* 메뉴 버튼을 다시 눌러 닫은 상태는 hover 중에도 유지 */
 .gnb>li.menu-closed .gnb2depth {
     max-height: 0;
@@ -159,7 +161,9 @@ header {
     transform: translateY(-8px);
     pointer-events: none;
 }
-.smart-header, .smart-overlay-menu{
+
+.smart-header,
+.smart-overlay-menu {
     display: none;
 }
 
@@ -167,17 +171,24 @@ header {
     .pc {
         display: none;
     }
-    .smart-header, .smart-overlay-menu{
-    display: block;
-}
+
+    .smart-header,
+    .smart-overlay-menu {
+        display: block;
+    }
+
     .header-top>.common-frame {
         padding: 1rem 2rem;
 
     }
 
     .smart-header {
-        position: relative;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
         z-index: 20;
+        background-color: #fff;
     }
 
     .smart-menu {
@@ -295,7 +306,7 @@ header {
         font-size: var(--fs-body1);
 
     }
-    
+
 
     .btn-login>a {
         color: #259DFF;
@@ -355,7 +366,8 @@ header {
     .smart-overlay-login .common-frame {
         padding: 1rem 1rem;
     }
-    .smart-overlay-menu>.overlay-menu-wrap{
+
+    .smart-overlay-menu>.overlay-menu-wrap {
         width: 70%;
     }
 
@@ -375,5 +387,3 @@ header {
         -webkit-overflow-scrolling: touch;
     }
 }
-
-
