@@ -10,26 +10,28 @@
   <link rel="stylesheet" href="./css-yw/common-yw.css">
   <link rel="stylesheet" href="./css-yw/bestseller.css">
   <link rel="stylesheet" href="./css-yw/header-yw.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js" defer></script>
 </head>
 
 <body>
-  <main>
-    <section class="bestseller">
-      <div class="bestseller-header">
-        <h2 class="bestseller-title">
-          <a href="#" bestseller-link>
-            <span>글길 베스트셀러</span>
-            <img class="bestseller-arrow" src="./img-yw/icn-arrow right.svg" alt="" aria-hidden="true">
-          </a>
-        </h2>
-      </div>
-      <nav class="bestseller-period" aria-label="베스트셀러 조회 기간">
-        <a class="bestseller-period-link" href="#">일별</a>
-        <a class="bestseller-period-link" href="#">주별</a>
-        <a class="bestseller-period-link" href="#">월별</a>
-      </nav>
+  <section class="bestseller">
+    <div class="bestseller-header">
+      <h2 class="bestseller-title">
+        <a href="#" bestseller-link>
+          <span>글길 베스트셀러</span>
+          <img class="bestseller-arrow" src="./img-yw/icn-arrow right.svg" alt="" aria-hidden="true">
+        </a>
+      </h2>
+    </div>
+    <nav class="bestseller-period" aria-label="베스트셀러 조회 기간">
+      <a class="bestseller-period-link" href="#">일별</a>
+      <a class="bestseller-period-link" href="#">주별</a>
+      <a class="bestseller-period-link" href="#">월별</a>
+    </nav>
+    <div class="cardlist-wrap">
       <ul class="bestseller-list">
-        <li class="bestseller-item">
+        <li class="bestseller-item swiper-slide">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/ceneca.jpg" alt="세네카, 오늘을 빼앗기고 있는 당신에게">
@@ -51,7 +53,7 @@
             </div>
           </article>
         </li>
-        <li class="bestseller-item">
+        <li class="swiper-slide bestseller-item">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/The-Odyssey.jpg" alt="오디세이아">
@@ -73,7 +75,7 @@
             </div>
           </article>
         </li>
-        <li class="bestseller-item">
+        <li class="swiper-slide bestseller-item">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/I-Wrote-That-It-Happened.jpg" alt="그랬다고 적었다">
@@ -95,7 +97,7 @@
             </div>
           </article>
         </li>
-        <li class="bestseller-item">
+        <li class="swiper-slide bestseller-item">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/zziny.jpg" alt="찌니주의보">
@@ -117,7 +119,7 @@
             </div>
           </article>
         </li>
-        <li class="bestseller-item">
+        <li class="swiper-slide bestseller-item">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/The-Odyssey-2.jpg" alt="오뒷세이아">
@@ -139,7 +141,7 @@
             </div>
           </article>
         </li>
-        <li class="bestseller-item">
+        <li class="swiper-slide bestseller-item">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/Siddhartha.jpg" alt="싯다르타">
@@ -161,7 +163,7 @@
             </div>
           </article>
         </li>
-        <li class="bestseller-item">
+        <li class="swiper-slide bestseller-item">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/Greek-and-Roman Mythology-Vol. 15.jpg" alt="처음 읽는 그리스 로마 신화 15">
@@ -183,7 +185,7 @@
             </div>
           </article>
         </li>
-        <li class="bestseller-item">
+        <li class="swiper-slide bestseller-item">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/mosoon.jpg" alt="모순">
@@ -205,7 +207,7 @@
             </div>
           </article>
         </li>
-        <li class="bestseller-item hidden">
+        <li class="swiper-slide bestseller-item hidden">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/Nietzsche.jpg" alt="니체의 초월자">
@@ -228,8 +230,35 @@
           </article>
         </li>
       </ul>
-    </section>
-  </main>
+      <!-- Initialize Swiper -->
+      <script>
+        const cardlist = new Swiper('.cardlist-wrap', {
+          breakpoints: {
+            0: {
+              slidesPerView: 1.2,
+              spaceBetween: 12,
+            },
+            340: {
+              slidesPerView: 2.2,
+              spaceBetween: 12,
+            },
+            768: {
+              slidesPerView: 3.2,
+              spaceBetween: 14,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 16,
+            }
+          },
+          autoplay: {
+            delay: 3000
+          }
+        });
+      </script>
+    </div>
+
+  </section>
 </body>
 
 </html>
