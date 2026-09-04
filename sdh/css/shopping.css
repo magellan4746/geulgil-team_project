@@ -7,8 +7,11 @@
     border-radius: 1rem;
     overflow: hidden;
     line-height: 0;
+    max-width: 350px;
 }
-
+.shop-book-thumb>figure img{
+    object-fit: cover;
+}
 .shop-book-upper {
     margin-bottom: 1.5rem;
 
@@ -21,9 +24,9 @@
 }
 
 .shop-book>.common-frame {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 0.3fr 1fr);
+    gap: 4rem;
 
 }
 
@@ -166,24 +169,28 @@
     background-color: #fff;
 }
 
-.shop-book-intro{
-    margin-top: 7rem;
-    
+.shop-book-intro {
+    margin-top: 3.5rem;
+
 }
 
-.book-intro-title{
+.book-intro-title {
     font-size: var(--fs-h3);
     font-weight: var(--fw2);
 }
-.book-intro-caption{
+
+.book-intro-caption {
     margin-top: 2rem;
     color: var(--black-500);
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--black-200);
 }
 
 @media(max-width:1076px) {
-    
+
 
     .shop-book>.common-frame {
+        display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
@@ -197,6 +204,7 @@
         margin-top: 10rem;
         width: 100%;
     }
+
     .shop-book-wrap {
         margin-top: 3rem;
     }
@@ -261,5 +269,12 @@
 @media(max-width:768px) {
     .shop-book-price {
         grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+
     }
+
+    
+
+
 }

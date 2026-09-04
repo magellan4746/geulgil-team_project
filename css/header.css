@@ -304,10 +304,11 @@ header {
         gap: 3rem;
         color: #fff;
         font-size: var(--fs-body1);
+        padding-right: 1rem;
 
     }
 
-
+    
     .btn-login>a {
         color: #259DFF;
         text-decoration: underline;
@@ -318,6 +319,7 @@ header {
         border-radius: 45px;
         padding: 0.5rem 3rem;
     }
+    
 
     .smart-overlay-list-top,
     .smart-overlay-list-bottom {

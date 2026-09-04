@@ -89,3 +89,8 @@
     justify-content: space-between;
     border-radius: 1rem;
 }
+
+.con3-card-badge>span, .con3-card-title{
+    color: #fff;
+
+}
