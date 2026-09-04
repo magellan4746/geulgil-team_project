@@ -70,3 +70,54 @@ nextButton.addEventListener("click", () => {
   }
 
 });
+
+
+/* ==================================================
+   메인 카테고리
+   기본 이미지 ↔ Hover 이미지 변경
+================================================== */
+
+const categoryItems = document.querySelectorAll(".category-item");
+
+categoryItems.forEach((item) => {
+  const categoryImage = item.querySelector(".category-image");
+
+  if (!categoryImage) return;
+
+  const defaultImage = categoryImage.dataset.default;
+  const hoverImage = categoryImage.dataset.hover;
+
+  /* hover 이미지 미리 로딩 */
+  if (hoverImage) {
+    const preloadImage = new Image();
+    preloadImage.src = hoverImage;
+  }
+
+  /* 마우스 올렸을 때 */
+  item.addEventListener("mouseenter", () => {
+    if (hoverImage) {
+      categoryImage.src = hoverImage;
+    }
+  });
+
+  /* 마우스 빠졌을 때 */
+  item.addEventListener("mouseleave", () => {
+    if (defaultImage) {
+      categoryImage.src = defaultImage;
+    }
+  });
+
+  /* 키보드 포커스 */
+  item.addEventListener("focus", () => {
+    if (hoverImage) {
+      categoryImage.src = hoverImage;
+    }
+  });
+
+  /* 키보드 포커스 해제 */
+  item.addEventListener("blur", () => {
+    if (defaultImage) {
+      categoryImage.src = defaultImage;
+    }
+  });
+});
