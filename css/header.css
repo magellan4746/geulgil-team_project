@@ -255,7 +255,7 @@ header {
         background: #fff;
         transform: translateX(-100%);
         transition: transform 0.3s ease;
-        overflow-y: scroll;
+        overflow-y: auto;
 
     }
 
@@ -309,7 +309,7 @@ header {
 
     }
 
-    
+
     .btn-login>a {
         color: #259DFF;
         text-decoration: underline;
@@ -320,7 +320,7 @@ header {
         border-radius: 45px;
         padding: 0.5rem 3rem;
     }
-    
+
 
     .smart-overlay-list-top,
     .smart-overlay-list-bottom {
@@ -371,9 +371,21 @@ header {
     }
 
     .smart-overlay-menu>.overlay-menu-wrap {
-        width: 70%;
+        width: 80%;
     }
 
+}
+
+@media(max-width:540px) {
+    .gnb {
+        
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    .login-tab{
+        white-space: nowrap;
+        overflow-x: auto;
+    }
 }
 
 @media (max-width: 382px) {
@@ -389,4 +401,8 @@ header {
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
     }
+}
+::-webkit-scrollbar {
+  width: 1px; /* 세로 스크롤바 너비 */
+  height: 1px; /* 가로 스크롤바 높이 */
 }

@@ -61,8 +61,7 @@ body {
 .main-categories__inner {
     width: 100%;
 
-    padding:
-        50px max(24px, calc((100% - 1280px) / 2)) 30px;
+    padding: 8rem 3rem;
 }
 
 
@@ -72,17 +71,12 @@ body {
 ================================================== */
 
 .category-list {
-    display: grid;
-
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-
-    column-gap: 24px;
-
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
     width: 100%;
-
     margin: 0;
     padding: 0;
-
     list-style: none;
 }
 
@@ -236,7 +230,6 @@ button {
 
 .new-books {
     width: 100%;
-    max-width: 1600px;
 
     margin-left: auto;
     margin-right: auto;
@@ -354,13 +347,12 @@ button {
 ============================== */
 
 .book-info {
-    padding-top: 16px;
+    padding-top: 2rem;
 }
 
 .book-title {
     overflow: hidden;
 
-    font-size: 16px;
     line-height: 1.45;
 
     font-weight: 600;
@@ -447,20 +439,18 @@ button {
     list-style: none;
 }
 
-.bestseller-item {
-    display: flex;
-    min-width: 0;
-}
+
 
 .new-book-card {
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
-    
+
     min-width: 0;
 
 }
-.book-card{
+
+.book-card {
     display: flex;
     gap: 1.75rem;
 }
@@ -482,14 +472,15 @@ button {
 }
 
 .book-info {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-normal);
-
-    min-width: 0;
-    padding-top: 8px;
+    padding-top: 0.5rem;
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .book-rank,
@@ -515,8 +506,8 @@ button {
 }
 
 .book-creators {
+    width: 100%;
     overflow: hidden;
-    max-width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: var(--fs-h4);
@@ -582,12 +573,7 @@ button {
 
 @media screen and (max-width: 1200px) {
 
-    .new-books {
-        max-width: none;
 
-
-        padding: 20px 32px 48px;
-    }
 
     .section-header {
         margin-bottom: 2rem;
@@ -629,12 +615,12 @@ button {
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-    .hero-banner{
+    .hero-banner {
         margin-top: 10rem;
     }
 
     .main-categories__inner {
-        padding: 30px 20px;
+        padding: 6rem 2rem;
     }
 
 
@@ -642,7 +628,7 @@ button {
         grid-template-columns: repeat(8, minmax(0, 1fr));
 
         /* 아이콘 사이 공간 */
-        column-gap: 8px;
+        column-gap: 2rem;
     }
 
 
@@ -688,18 +674,25 @@ button {
 @media screen and (max-width: 768px) {
 
     .main-categories__inner {
-        padding: 24px 16px;
+        padding: 2rem 1rem;
     }
 
 
     .category-list {
         /* 4개씩 */
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
 
-        column-gap: 8px;
-        row-gap: 20px;
+        column-gap: 0.5rem;
+        row-gap: 1rem;
+        padding: 0 3rem;
     }
 
+    .book-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
 
     .category-item {
         gap: 7px;
@@ -740,16 +733,11 @@ button {
 ================================================== */
 
 @media screen and (max-width: 600px) {
-    .hero-banner{
+    .hero-banner {
         margin-top: 8rem;
     }
 
-    .new-books {
-        /* 모바일은 정상 간격 */
-        margin-top: 0;
 
-        padding: 16px 20px 40px;
-    }
 
     .section-header {
         margin-bottom: 24px;
@@ -790,7 +778,17 @@ button {
     }
 
     .book-title {
+        width: auto;
         font-size: 1rem;
+    }
+
+    .book-creators {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: var(--fs-h4);
+        font-weight: var(--fw1);
+        color: var(--black-500);
     }
 
     .book-author {
@@ -800,12 +798,13 @@ button {
     }
 
 }
-@media(max-width: 520px){
-    
+
+@media(max-width: 520px) {
+
     .book-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        
+
     }
 }
 
@@ -816,11 +815,7 @@ button {
 
 @media screen and (max-width: 360px) {
 
-    .new-books {
-        margin-top: 0;
 
-        padding: 1rem 1rem 2.5rem;
-    }
 
     .book-card {
         flex-basis: 150px;
