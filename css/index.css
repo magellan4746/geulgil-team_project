@@ -1,0 +1,609 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+/* PC 기준: 1920 × 759 */
+.hero-banner {
+    position: relative;
+    width: 1920px;
+    height: 759px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #f7f0e8;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hero-slide.is-active {
+    z-index: 1;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hero-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 화면이 1920px보다 작을 때 비율 유지 */
+@media (max-width: 1920px) {
+    .hero-banner {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1920 / 759;
+    }
+}
+
+/* ==================================================
+   메인 카테고리
+================================================== */
+
+.main-categories {
+    width: 100%;
+    max-width: 1920px;
+
+    margin: 0 auto;
+
+    background: #fff;
+}
+
+
+/* 카테고리 안쪽 영역 */
+.main-categories__inner {
+    width: 100%;
+
+    padding:
+        50px max(24px, calc((100% - 1280px) / 2)) 30px;
+}
+
+
+/* ==================================================
+   카테고리 목록
+   PC : 8개 한 줄
+================================================== */
+
+.category-list {
+    display: grid;
+
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+
+    column-gap: 24px;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.category-list>li {
+    min-width: 0;
+}
+
+
+/* ==================================================
+   카테고리 하나
+================================================== */
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 10px;
+
+    color: #222;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   원 + 아이콘이 합쳐진 이미지
+================================================== */
+
+.category-image {
+    display: block;
+
+    width: 100px;
+    height: 100px;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* 마우스 호버 */
+.category-item:hover .category-image {
+    transform: translateY(-3px);
+}
+
+
+.category-image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+/* 마우스 올렸을 때 */
+.category-item:hover .category-image,
+.category-item:focus-visible .category-image {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.14));
+}
+
+
+/* 키보드 접근성 */
+.category-item:focus-visible {
+    outline: 2px solid #5b6de8;
+    outline-offset: 5px;
+    border-radius: 8px;
+}
+
+
+/* ==================================================
+   글자
+================================================== */
+
+.category-name {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   TABLET
+   601px ~ 1025px
+
+   8개 한 줄 유지
+   화면이 작아질수록 아이콘도 자동 축소
+================================================== */
+
+@media screen and (min-width: 601px) and (max-width: 1025px) {
+
+    .main-categories__inner {
+        padding: 30px 20px;
+    }
+
+
+    .category-list {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+
+        /* 아이콘 사이 공간 */
+        column-gap: 8px;
+    }
+
+
+    /*
+    1025px에서는 크게,
+    601px에 가까워질수록 작아짐
+  */
+    .category-image {
+        width: clamp(48px, 7vw, 72px);
+        height: clamp(48px, 7vw, 72px);
+    }
+
+
+    .category-item {
+        gap: 8px;
+    }
+
+
+    .category-name {
+        font-size: clamp(10px, 1.4vw, 12px);
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+   600px 이하
+
+   4개씩 두 줄
+================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .main-categories__inner {
+        padding: 24px 16px;
+    }
+
+
+    .category-list {
+        /* 4개씩 */
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        column-gap: 8px;
+        row-gap: 20px;
+    }
+
+
+    .category-item {
+        gap: 7px;
+    }
+
+
+    /*
+    모바일 화면이 작아지면
+    아이콘도 자동으로 같이 작아짐
+  */
+    .category-image {
+        width: clamp(48px, 15vw, 64px);
+        height: clamp(48px, 15vw, 64px);
+    }
+
+
+    .category-name {
+        font-size: clamp(10px, 2.8vw, 11px);
+    }
+
+}
+
+
+
+/* =========================
+   신작도서
+========================= */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family:
+        Pretendard,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans KR",
+        Arial,
+        sans-serif;
+
+    color: #111;
+    background: #fff;
+}
+
+button {
+    font: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* ==============================
+   전체 영역
+============================== */
+
+.main {
+    width: 100%;
+}
+
+
+/* ==============================
+   지금 주목할 신작
+============================== */
+
+.new-books {
+    width: 100%;
+    max-width: 1600px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 위쪽 큰 공백 줄이기 */
+
+    padding: 2rem 3rem;
+}
+
+
+/* ==============================
+   상단 제목
+============================== */
+
+.section-header {
+    margin-bottom: 36px;
+}
+
+.section-title-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    border: 0;
+    padding: 0;
+
+    background: transparent;
+
+    color: #181818;
+
+    cursor: pointer;
+}
+
+.section-title {
+    font-size: 20px;
+    line-height: 1.4;
+
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+
+/* 오른쪽 화살표 */
+
+.arrow {
+    display: block;
+
+    width: 9px;
+    height: 9px;
+
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+
+    transform: rotate(45deg);
+}
+
+
+/* ==============================
+   책 목록
+============================== */
+
+.book-list {
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 40px;
+}
+
+
+/* ==============================
+   책 카드
+============================== */
+
+.book-card {
+    min-width: 0;
+}
+
+
+/* 책 표지 */
+
+.book-cover {
+    width: 100%;
+
+    aspect-ratio: 0.68;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background: #f3f3f3;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* PC 마우스 hover */
+
+@media (hover: hover) {
+
+    .book-card:hover .book-cover img {
+        transform: scale(1.025);
+    }
+
+}
+
+
+/* ==============================
+   책 정보
+============================== */
+
+.book-info {
+    padding-top: 16px;
+}
+
+.book-title {
+    overflow: hidden;
+
+    font-size: 16px;
+    line-height: 1.45;
+
+    font-weight: 600;
+    letter-spacing: -0.4px;
+
+    color: #202020;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.book-author {
+    margin-top: 8px;
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    font-weight: 400;
+
+    color: #8b8b8b;
+}
+
+
+
+
+
+/* ==================================================
+   1200px 이하
+   사진처럼 3개씩 줄바꿈
+================================================== */
+
+@media screen and (max-width: 1200px) {
+
+    .new-books {
+        max-width: none;
+
+
+        padding: 20px 32px 48px;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+
+    /* 핵심 */
+    .book-list {
+        display: grid;
+
+        /* 한 줄에 3개 */
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        column-gap: 28px;
+        row-gap: 28px;
+    }
+
+
+    .book-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+   402px 기준
+================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .new-books {
+        /* 모바일은 정상 간격 */
+        margin-top: 0;
+
+        padding: 16px 20px 40px;
+    }
+
+    .section-header {
+        margin-bottom: 24px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .section-title-btn {
+        gap: 8px;
+    }
+
+    .arrow {
+        width: 8px;
+        height: 8px;
+    }
+
+
+    /* 책 목록 */
+
+    .book-list {
+        gap: 16px;
+    }
+
+
+    /* 402px 기준 약 2개 노출 */
+
+    .book-card {
+        flex: 0 0 166px;
+    }
+
+
+    /* 책 정보 */
+
+    .book-info {
+        padding-top: 13px;
+    }
+
+    .book-title {
+        font-size: 14px;
+    }
+
+    .book-author {
+        margin-top: 6px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* ==============================
+   360px 이하
+============================== */
+
+@media screen and (max-width: 360px) {
+
+    .new-books {
+        margin-top: 0;
+
+        padding: 16px 16px 40px;
+    }
+
+    .book-card {
+        flex-basis: 150px;
+    }
+
+}
