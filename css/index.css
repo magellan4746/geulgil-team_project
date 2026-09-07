@@ -264,7 +264,7 @@ button {
 }
 
 .section-title {
-    font-size: 20px;
+    font-size: var(--fs-h4);
     line-height: 1.4;
 
     font-weight: 700;
@@ -388,7 +388,7 @@ button {
 
 .bestseller-header {
     display: flex;
-    font-size: var(--fs-h2);
+    font-size: var(--fs-h4);
     font-weight: var(--fw2);
     margin-bottom: 2rem;
 }
@@ -404,7 +404,7 @@ button {
     align-items: center;
     justify-content: center;
 
-    width: 9rem;
+    width: 6rem;
     height: var(--space-2x-large);
     box-sizing: border-box;
 
@@ -413,7 +413,7 @@ button {
     border: 1px solid var(--black-300);
     border-radius: 100px;
 
-    font-size: var(--fs-h4);
+    font-size: var(--fs-body1);
     letter-spacing: 0;
     text-decoration: none;
 }
@@ -491,7 +491,7 @@ button {
 }
 
 .book-rank {
-    font-size: var(--fs-h2);
+    font-size: var(--fs-h4);
     font-weight: var(--fw2);
     color: #6594E7;
 }
