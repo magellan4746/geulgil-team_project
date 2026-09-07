@@ -41,14 +41,7 @@ body {
     object-position: center;
 }
 
-/* 화면이 1920px보다 작을 때 비율 유지 */
-@media (max-width: 1920px) {
-    .hero-banner {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1920 / 759;
-    }
-}
+
 
 /* ==================================================
    메인 카테고리
@@ -187,94 +180,7 @@ body {
 }
 
 
-/* ==================================================
-   TABLET
-   601px ~ 1025px
 
-   8개 한 줄 유지
-   화면이 작아질수록 아이콘도 자동 축소
-================================================== */
-
-@media screen and (min-width: 601px) and (max-width: 1025px) {
-
-    .main-categories__inner {
-        padding: 30px 20px;
-    }
-
-
-    .category-list {
-        grid-template-columns: repeat(8, minmax(0, 1fr));
-
-        /* 아이콘 사이 공간 */
-        column-gap: 8px;
-    }
-
-
-    /*
-    1025px에서는 크게,
-    601px에 가까워질수록 작아짐
-  */
-    .category-image {
-        width: clamp(48px, 7vw, 72px);
-        height: clamp(48px, 7vw, 72px);
-    }
-
-
-    .category-item {
-        gap: 8px;
-    }
-
-
-    .category-name {
-        font-size: clamp(10px, 1.4vw, 12px);
-    }
-
-}
-
-
-/* ==================================================
-   MOBILE
-   600px 이하
-
-   4개씩 두 줄
-================================================== */
-
-@media screen and (max-width: 600px) {
-
-    .main-categories__inner {
-        padding: 24px 16px;
-    }
-
-
-    .category-list {
-        /* 4개씩 */
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-
-        column-gap: 8px;
-        row-gap: 20px;
-    }
-
-
-    .category-item {
-        gap: 7px;
-    }
-
-
-    /*
-    모바일 화면이 작아지면
-    아이콘도 자동으로 같이 작아짐
-  */
-    .category-image {
-        width: clamp(48px, 15vw, 64px);
-        height: clamp(48px, 15vw, 64px);
-    }
-
-
-    .category-name {
-        font-size: clamp(10px, 2.8vw, 11px);
-    }
-
-}
 
 
 
@@ -312,10 +218,7 @@ button {
     font: inherit;
 }
 
-img {
-    display: block;
-    width: 100%;
-}
+
 
 
 /* ==============================
@@ -381,8 +284,8 @@ img {
 .arrow {
     display: block;
 
-    width: 9px;
-    height: 9px;
+    width: 0.7rem;
+    height: 0.7rem;
 
     border-top: 2px solid #333;
     border-right: 2px solid #333;
@@ -482,14 +385,195 @@ img {
     color: #8b8b8b;
 }
 
+.sec-best {
+    padding: var(--space-3x-large) var(--space-2x-large);
+}
+
+/* 글길 베스트셀러 제목 */
+.bestseller {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-normal);
+}
+
+.bestseller-header {
+    display: flex;
+    font-size: var(--fs-h2);
+    font-weight: var(--fw2);
+    margin-bottom: 2rem;
+}
+
+.bestseller-period {
+    display: flex;
+    gap: var(--space-normal);
+    margin-bottom: 3rem;
+}
+
+.bestseller-period-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 9rem;
+    height: var(--space-2x-large);
+    box-sizing: border-box;
+
+    color: var(--black-800);
+    background-color: var(--black-100);
+    border: 1px solid var(--black-300);
+    border-radius: 100px;
+
+    font-size: var(--fs-h4);
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+.bestseller-period-link:hover {
+    background-color: var(--black-0);
+}
+
+.bestseller-period-link:focus-visible {
+    outline: 3px solid #333;
+    outline-offset: 3px;
+}
+
+/* 북 리스트 그리드 */
+
+.bestseller-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3x-large) var(--space-normal);
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bestseller-item {
+    display: flex;
+    min-width: 0;
+}
+
+.book-card {
+    display: flex;
+    
+    gap: 1.75rem;
+}
+
+.book-image {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.book-cover {
+    display: block;
+    width: 160px;
+    height: 234px;
+    box-sizing: border-box;
+
+    object-fit: cover;
+    border: 1px solid var(--black-200);
+    border-radius: 8px;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-normal);
+
+    min-width: 0;
+    padding-top: 8px;
+    text-align: left;
+}
+
+.book-rank,
+.book-title,
+.book-creators,
+.book-publisher {
+    margin: 0;
+}
+
+.book-rank {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw2);
+    color: #6594E7;
+}
+
+.book-title {
+    width: 100%;
+    font-size: var(--fs-h4);
+    font-weight: var(--fw2);
+    color: var(--black-600);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-creators {
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: var(--fs-h4);
+    font-weight: var(--fw1);
+    color: var(--black-500);
+}
+
+.book-publisher {
+    font-size: var(--fs-h4);
+    font-weight: var(--fw1);
+    color: var(--black-300);
+}
+
+.book-rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.book-rating-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.book-rating-score {
+    font-size: var(--fs-h4);
+    font-weight: var(--fw2);
+    color: var(--black-600);
+}
+
+.book-review-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 2rem;
+    padding: 0.25rem 0.5rem;
+
+    background-color: var(--black-100);
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: var(--fs-h4);
+    font-weight: var(--fw1);
+    color: var(--black-400);
+}
+
+.book-review-link:focus-visible {
+    outline: 3px solid #333333;
+    outline-offset: 3px;
+}
 
 
 
-
-/* ==================================================
-   1200px 이하
-   사진처럼 3개씩 줄바꿈
-================================================== */
+/* 화면이 1920px보다 작을 때 비율 유지 */
+@media (max-width: 1920px) {
+    .hero-banner {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1920 / 759;
+    }
+}
 
 @media screen and (max-width: 1200px) {
 
@@ -501,7 +585,7 @@ img {
     }
 
     .section-header {
-        margin-bottom: 30px;
+        margin-bottom: 2rem;
     }
 
 
@@ -512,8 +596,8 @@ img {
         /* 한 줄에 3개 */
         grid-template-columns: repeat(3, minmax(0, 1fr));
 
-        column-gap: 28px;
-        row-gap: 28px;
+        column-gap: 2rem;
+        row-gap: 2rem;
     }
 
 
@@ -526,11 +610,134 @@ img {
 
 
 /* ==================================================
+   TABLET
+   601px ~ 1025px
+
+   8개 한 줄 유지
+   화면이 작아질수록 아이콘도 자동 축소
+================================================== */
+
+@media (max-width: 1180px) {
+    .bestseller-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .hero-banner{
+        margin-top: 10rem;
+    }
+
+    .main-categories__inner {
+        padding: 30px 20px;
+    }
+
+
+    .category-list {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+
+        /* 아이콘 사이 공간 */
+        column-gap: 8px;
+    }
+
+
+    /*
+    1025px에서는 크게,
+    601px에 가까워질수록 작아짐
+  */
+    .category-image {
+        width: clamp(3rem, 7vw, 4.5rem);
+        height: clamp(3rem, 7vw, 4.5rem);
+    }
+
+
+    .category-item {
+        gap: 8px;
+    }
+
+
+    .category-name {
+        font-size: clamp(1rem, 1.4vw, 1rem);
+    }
+
+    .bestseller-arrow {
+        width: 18px;
+    }
+
+
+
+    .hidden {
+        display: none;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+   600px 이하
+
+   4개씩 두 줄
+================================================== */
+
+@media screen and (max-width: 768px) {
+
+    .main-categories__inner {
+        padding: 24px 16px;
+    }
+
+
+    .category-list {
+        /* 4개씩 */
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        column-gap: 8px;
+        row-gap: 20px;
+    }
+
+
+    .category-item {
+        gap: 7px;
+    }
+
+
+    /*
+    모바일 화면이 작아지면
+    아이콘도 자동으로 같이 작아짐
+  */
+    .category-image {
+        width: clamp(3rem, 15vw, 4rem);
+        height: clamp(3rem, 15vw, 4rem);
+    }
+
+
+    .category-name {
+        font-size: clamp(10px, 2.8vw, 11px);
+    }
+
+    .bestseller-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==================================================
+   1200px 이하
+   사진처럼 3개씩 줄바꿈
+================================================== */
+
+
+
+
+/* ==================================================
    MOBILE
    402px 기준
 ================================================== */
 
 @media screen and (max-width: 600px) {
+    .hero-banner{
+        margin-top: 8rem;
+    }
 
     .new-books {
         /* 모바일은 정상 간격 */
@@ -544,23 +751,23 @@ img {
     }
 
     .section-title {
-        font-size: 18px;
+        font-size: 1rem;
     }
 
     .section-title-btn {
-        gap: 8px;
+        gap: 0.5rem;
     }
 
     .arrow {
-        width: 8px;
-        height: 8px;
+        width: 0.5rem;
+        height: 0.5rem;
     }
 
 
     /* 책 목록 */
 
     .book-list {
-        gap: 16px;
+        gap: 1rem;
     }
 
 
@@ -574,19 +781,27 @@ img {
     /* 책 정보 */
 
     .book-info {
-        padding-top: 13px;
+        padding-top: 1rem;
     }
 
     .book-title {
-        font-size: 14px;
+        font-size: 1rem;
     }
 
     .book-author {
-        margin-top: 6px;
+        margin-top: 0.5rem;
 
-        font-size: 12px;
+        font-size: 1rem;
     }
 
+}
+@media(max-width: 520px){
+    
+    .book-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
 }
 
 
@@ -599,7 +814,7 @@ img {
     .new-books {
         margin-top: 0;
 
-        padding: 16px 16px 40px;
+        padding: 1rem 1rem 2.5rem;
     }
 
     .book-card {
