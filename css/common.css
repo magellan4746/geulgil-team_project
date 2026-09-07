@@ -82,9 +82,11 @@ main{
 }
 
 .pc{display: block;}
-.tab{display: none;}
+.pad{display: none;}
 .mo{display: none;}
-
+#pc{display: block;}
+#pad{display: none;}
+#mo{display: none;}
 
 h1{font-size: var(--fs-h1);}
 h2{font-size: var(--fs-h2);}
@@ -96,8 +98,11 @@ h4{font-size: var(--fs-h4);}
         margin-top: 5rem;
     }
     .pc{display: none;}
-    .tab{display: block;}
+    .pad{display: block;}
     .mo{display: none;}
+    #pc{display: none;}
+    #pad{display: block;}
+    #mo{display: none;}
 
     html{
         font-size: var(--fs-pad);
@@ -117,6 +122,9 @@ h4{font-size: var(--fs-h4);}
 }
 @media (max-width:402px){
     .pc{display: none;}
-    .tab{display: none;}
+    .pad{display: none;}
     .mo{display: block;}
+    #pc{display: none;}
+    #pad{display: none;}
+    #mo{display: block;}
 }
