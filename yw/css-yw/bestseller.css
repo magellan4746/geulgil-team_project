@@ -1,20 +1,22 @@
-
-section{
+section {
   padding: var(--space-3x-large) var(--space-2x-large);
 }
+
 /* 글길 베스트셀러 제목 */
-.bestseller{
+.bestseller {
   display: flex;
   flex-direction: column;
   gap: var(--space-normal);
 }
-.bestseller-header{
+
+.bestseller-header {
   display: flex;
   font-size: var(--fs-h2);
   font-weight: var(--fw2);
   margin-bottom: 2rem;
 }
 
+/* 일별 주별 월별 버튼 영역  */
 .bestseller-period {
   display: flex;
   gap: var(--space-normal);
@@ -48,6 +50,7 @@ section{
   outline: 3px solid #333;
   outline-offset: 3px;
 }
+
 /* 북 리스트 그리드 */
 
 .bestseller-list {
@@ -79,6 +82,7 @@ section{
   display: block;
   width: 160px;
   height: 234px;
+  aspect-ratio: 160/234;
   box-sizing: border-box;
 
   object-fit: cover;
@@ -96,22 +100,26 @@ section{
   padding-top: 8px;
   text-align: left;
 }
+
 .book-rank,
 .book-title,
 .book-creators,
 .book-publisher {
   margin: 0;
 }
+
 .book-rank {
   font-size: var(--fs-h2);
   font-weight: var(--fw2);
   color: #6594E7;
 }
-.book-title{
+
+.book-title {
   font-size: var(--fs-h4);
   font-weight: var(--fw2);
   color: var(--black-600);
 }
+
 .book-creators {
   overflow: hidden;
   max-width: 100%;
@@ -121,11 +129,13 @@ section{
   font-weight: var(--fw1);
   color: var(--black-500);
 }
-.book-publisher{
+
+.book-publisher {
   font-size: var(--fs-h4);
   font-weight: var(--fw1);
   color: var(--black-300);
 }
+
 .book-rating {
   display: flex;
   align-items: center;
@@ -166,31 +176,51 @@ section{
 }
 
 /* 태블릿 */
-@media (max-width:1398px){
-  main{
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+@media (max-width:1398px) {
+  section {
+    padding: var(--space-3x-large) var(--space-2x-large);
   }
-  .pc{display: none;}
-  .tab{display: block;}
-  .mo{display: none;}
-  html{
-      font-size: var(--fs-pad);
+
+  html {
+    font-size: var(--fs-pad);
   }
-  .bestseller-arrow{
+
+  .bestseller-arrow {
     width: 18px;
   }
+
   .bestseller-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .hidden{
-    display: none;
+}
+
+/* 모바일 */
+@media (max-width: 860px) {
+  section {
+    padding: var(--space-3x-large) var(--space-2x-large);
   }
 
-}
-/* 모바일 */
-@media (max-width: 700px) {
+  html {
+    font-size: var(--fs-mo);
+  }
+
+  .bestseller-arrow {
+    width: 16px;
+  }
+
   .bestseller-list {
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .swiper-slide {
+    display: block;
+  }
+
+  .hidden {
+    display: block;
   }
 }
