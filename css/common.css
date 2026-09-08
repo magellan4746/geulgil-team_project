@@ -95,7 +95,7 @@ h4{font-size: var(--fs-h4);}
 
 @media (max-width:1024px){
     main{
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
     .pc{display: none;}
     .pad{display: block;}
@@ -113,6 +113,10 @@ h4{font-size: var(--fs-h4);}
 }
 
 @media (max-width:768px){
+    main{
+        margin-top: 8rem;
+
+    }
     html{
         font-size: var(--fs-mo);
     }
