@@ -525,6 +525,9 @@ button {
 }
 
 .book-publisher {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-size: var(--fs-h4);
     font-weight: var(--fw1);
     color: var(--black-300);
@@ -732,7 +735,9 @@ button {
     }
 
     .bestseller-list {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 4.5rem;
     }
 
 }
@@ -802,7 +807,7 @@ button {
     }
 
     .book-title {
-        width: auto;
+        
         font-size: 1rem;
     }
 
