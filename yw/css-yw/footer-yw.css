@@ -1,0 +1,470 @@
+/* 푸터 색상 및 패딩 */
+footer {
+    margin: 0 auto;
+    background-color: #DFDFDF;
+    color: #000;
+    padding: 4rem 3rem;
+}
+
+.footer-upper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+}
+
+/* 푸터 왼쪽 영역 */
+.foot-left {
+    width: 60%;
+    max-width: 1400px;
+}
+
+.foot-list-1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+/* 로고 설정 */
+.logof {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 6rem;
+}
+
+.logof img {
+    height: 6.25rem;
+    margin-bottom: 2rem;
+}
+
+.slogan {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw2);
+    margin-bottom: 1rem;
+}
+
+.brand-desc {
+    line-height: var(--lh2);
+    font-size: var(--fs-body1);
+    font-weight: var(--fw1);
+}
+
+/* 푸터 로고 하단 메뉴*/
+.footmenu {
+    display: flex;
+    gap: 0;
+    font-size: var(--fs-h4);
+    font-weight: var(--fw1);
+    margin-bottom: 1rem;
+}
+
+.footmenu li {
+    margin-right: 2rem;
+}
+
+.stli {
+    font-weight: var(--fw2);
+}
+
+/* 회사 정보 */
+.footmenu-wrap {
+    margin-bottom: 2rem;
+}
+
+.footmenu.tap {
+    display: none;
+}
+
+.coinfo-list {
+    display: flex;
+    gap: 2rem;
+    font-size: var(--fs-h4);
+    font-weight: var(--fw1);
+    margin-bottom: 1rem;
+}
+
+.coinfo-list.tap {
+    display: none;
+}
+
+/* 푸터 오른쪽 영역 */
+.foot-right {
+    width: 100%;
+    max-width: 596px;
+}
+
+.foot-list-2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 596px;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    font-size: var(--fs-h4);
+    font-weight: var(--fw1);
+}
+
+.account.tap {
+    display: none;
+}
+
+.community-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: var(--fs-h4);
+}
+
+.community-title {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.community-info {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.community-list caption {
+    display: none;
+}
+
+.foot-bottom {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.sns.tap {
+    display: none;
+}
+
+.foot-bottom.tap {
+    display: none;
+}
+
+.copy.tap {
+    display: none
+}
+
+.sns {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.coinfo-list.tap {
+    display: none;
+}
+
+.desktop-br {
+    display: none;
+}
+
+/* 패드용 */
+@media (max-width:1560px) {
+    .footer-upper {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .logof img {
+        margin-bottom: 2rem;
+    }
+
+    .logof {
+        margin-bottom: 3rem;
+    }
+
+    .coinfo {
+        gap: 1rem;
+        width: 100%px;
+        max-width: 100%;
+    }
+
+    .coinfo-list.mo {
+        display: none;
+    }
+
+    .foot-right {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .foot-list-2 {
+        gap: 0;
+        max-width: 100%;
+    }
+
+    .account {
+        display: none;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .account.tap {
+        display: flex;
+    }
+
+    .foot-bottom {
+        display: none;
+    }
+
+    .foot-bottom.tap {
+        display: flex;
+        margin-top: 3rem;
+        justify-content: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .copy {
+        display: none;
+    }
+
+    .sns {
+        display: none;
+    }
+
+    .copy.tap {
+        display: block;
+    }
+
+    .sns {
+        display: none;
+    }
+
+    .sns.tap {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+
+    }
+
+    .community-list {
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+
+    .community-info {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        width: 100%;
+        max-width: 700px;
+        place-items: left;
+    }
+
+    .footmenu-wrap {
+        margin-bottom: 2rem;
+        width: 900px;
+    }
+
+    .desktop-br {
+        display: none;
+    }
+}
+
+@media(max-width:970px) {
+    html {
+        font-size: var(--fs-pad);
+    }
+
+    .coinfo {
+        gap: 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .coinfo-list {
+        gap: 1.5rem;
+    }
+
+    .footmenu-wrap {
+        margin-bottom: 2rem;
+        width: 800px;
+    }
+}
+
+/* 모바일용 */
+@media(max-width:844px) {
+    html {
+        font-size: var(--fs-mo);
+    }
+
+    .coinfo-list {
+        gap: 1.5rem;
+    }
+
+    .footmenu-wrap {
+        margin-bottom: 2rem;
+        width: 700px;
+    }
+}
+
+@media(max-width:800px) {
+    html {
+        font-size: var(--fs-mo);
+    }
+
+    .coinfo-list {
+        gap: 1rem;
+        font-size: var(--fs-body1);
+    }
+
+    .footmenu {
+        font-size: var(--fs-body1);
+    }
+
+    .community-list {
+        font-size: var(--fs-body1);
+    }
+
+    .coinfo-list.mo {
+        display: none;
+    }
+}
+
+@media(max-width:779px) {
+    html {
+        font-size: var(--fs-mo);
+    }
+
+    .logof {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foot-left {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .foot-list-1 {
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footmenu.pc {
+        display: none;
+    }
+
+    .footmenu-wrap {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .footmenu.tap {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .fm-upper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .fm-bottom {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .coinfo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .coinfo-list {
+        flex-direction: column;
+    }
+
+    .coinfo-list .tap {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .community-title {
+        justify-content: center;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .community-info {
+        place-items: center;
+    }
+
+    .sns.tap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .account.tap {
+        display: flex;
+        text-align: center;
+    }
+
+    .desktop-br {
+        display: block;
+    }
+
+    .account.tap {
+        display: flex;
+        text-align: center;
+        font-size: var(--fs-body1);
+    }
+}
+
+@media(max-width:379px) {
+    html {
+        font-size: var(--fs-mo);
+    }
+
+    .footmenu li {
+        margin-right: 0.5rem;
+    }
+
+    .desktop-br {
+        display: block;
+    }
+
+    .footmenu li {
+        margin-right: 0.5rem;
+        font-size: var(--fs-body2);
+    }
+
+    .coinfo-list {
+        flex-direction: column;
+        font-size: var(--fs-body2);
+    }
+
+    .community-list {
+        font-size: var(--fs-body2);
+    }
+}
