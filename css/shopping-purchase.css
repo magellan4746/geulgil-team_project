@@ -197,12 +197,7 @@
 ========================= */
 
 .review-section {
-    width: 100%;
-
-    margin: 0 auto;
-
-    padding: 4rem 2.5rem 6.25rem;
-
+    margin-top: 3rem;
     color: #222;
 }
 
@@ -212,10 +207,8 @@
 ========================= */
 
 .review-related-title {
-    margin-bottom: 45px;
-
-    font-size: 18px;
-    font-weight: 700;
+    margin-bottom: 3rem;
+    font-weight: var(--fw2);
 }
 
 
@@ -224,13 +217,13 @@
     justify-content: center;
     align-items: flex-start;
 
-    gap: 45px;
+    gap: 2rem;
     width: 100%;
 }
 
 
 .review-related-book {
-    width: 180px;
+    width: 11.25rem;
 
     flex: 0 0 auto;
 }
@@ -566,12 +559,8 @@
 
     .review-section {
         width: 100%;
-        max-width: 100%;
-
-        padding-left: clamp(24px, 4vw, 60px);
-        padding-right: clamp(24px, 4vw, 60px);
-
-        box-sizing: border-box;
+        margin-top: 3rem;
+        color: #222;
     }
 
     .review-write-row {
@@ -664,9 +653,7 @@
 }
 @media screen and (min-width: 601px) and (max-width: 1024px) {
 
-    .review-section {
-        padding: 60px 40px 90px;
-    }
+    
 
 
     /* 책 */
@@ -788,8 +775,7 @@
     .review-section {
         display: flex;
         flex-direction: column;
-
-        padding: 35px 18px 70px;
+       
     }
 
     /* =====================
