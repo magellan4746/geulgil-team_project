@@ -77,8 +77,8 @@
 }
 
 .shop-book-lower {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
     gap: 3rem;
 }
 
@@ -132,6 +132,8 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
     background-color: var(--black-0);
     padding: 2rem 3rem;
@@ -141,22 +143,24 @@
 
 .btn-main,
 .btn-sub {
+    
     text-align: center;
     font-weight: var(--fw2);
     border-radius: 0.5rem;
 }
 
 .btn-main {
+    width: 100%;
     font-size: var(--fs-h4);
     color: var(--black-0);
     background-color: var(--blue-700);
-
-    padding: 1rem 3rem;
+    padding: 0.5rem 1rem;
     white-space: nowrap;
 
 }
 
 .btn-sub-wrap {
+    width: 100%;
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -210,6 +214,7 @@
     }
 
     .shop-book-lower {
+        display: flex;
         flex-direction: column;
         gap: 3rem;
     }
@@ -220,8 +225,8 @@
 
     .shop-book-price {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 4rem;
+        grid-template-columns:0.8fr 1fr ;
+        gap: 2rem;
         justify-content: center;
         align-items: center;
     }
