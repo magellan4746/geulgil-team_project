@@ -577,20 +577,21 @@
 
   /* 책 제목 */
   .grid-book-title {
-    margin-top: 10px;
+  margin-top: 10px;
 
-    font-size: 14px;
-    line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.4;
 
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    white-space: normal;
-    word-break: keep-all;
-  }
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
 
 
   /* 저자 */
@@ -603,25 +604,32 @@
 
   /* 별점 */
   .grid-book-rating {
-    gap: 3px;
+   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 
-    margin-top: 6px;
+  column-gap: 3px;
+  row-gap: 2px;
 
-    white-space: nowrap;
-  }
+  margin-top: 6px;
+
+  white-space: normal;
 
   .stars {
-    font-size: 11px;
-  }
+  font-size: 11px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
-  .grid-book-rating strong {
-    font-size: 11px;
-  }
+.grid-book-rating strong {
+  font-size: 11px;
+  white-space: nowrap;
+}
 
-  .review-count {
-    font-size: 10px;
-  }
-
+.review-count {
+  font-size: 10px;
+  white-space: nowrap;
+}
 
   /* 페이지 번호 */
   .pagination {

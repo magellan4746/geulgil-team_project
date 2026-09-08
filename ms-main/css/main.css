@@ -43,6 +43,51 @@ body {
   object-position: center;
 }
 
+/* =========================
+   히어로 배너 반응형 이미지
+========================= */
+
+/* 기본 PC */
+.hero-slide .hero-pc {
+  display: block;
+}
+
+.hero-slide .hero-pad,
+.hero-slide .hero-mobile {
+  display: none;
+}
+
+
+/* PAD : 601px ~ 1024px */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+  .hero-slide .hero-pc,
+  .hero-slide .hero-mobile {
+    display: none;
+  }
+
+  .hero-slide .hero-pad {
+    display: block;
+  }
+
+}
+
+
+/* 모바일 : 600px 이하 */
+@media screen and (max-width: 600px) {
+
+  .hero-slide .hero-pc,
+  .hero-slide .hero-pad {
+    display: none;
+  }
+
+  .hero-slide .hero-mobile {
+    display: block;
+  }
+
+}
+
+
 /* 화면이 1920px보다 작을 때 비율 유지 */
 @media (max-width: 1920px) {
   .hero-banner {
@@ -52,6 +97,21 @@ body {
   }
 }
 
+
+/* 히어로배너 PAD 배너 비율 */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .hero-banner {
+    aspect-ratio: 1024 / 900;
+  }
+}
+
+
+/* 히어로배너  모바일 배너 비율 */
+@media screen and (max-width: 600px) {
+  .hero-banner {
+    aspect-ratio: 402 / 500;
+  }
+}
 /* ==================================================
    메인 카테고리
 ================================================== */
@@ -244,43 +304,41 @@ body {
 ================================================== */
 
 @media screen and (max-width: 600px) {
+  .main-categories {
+    margin: 0;
+    padding: 0;
+  }
 
   .main-categories__inner {
-    padding: 24px 16px;
+    padding: 24px 16px 0;
+    margin: 0;
   }
-
 
   .category-list {
-    /* 4개씩 */
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
 
-    column-gap: 8px;
-    row-gap: 20px;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0;
+
+    column-gap: 10px;
+    row-gap: 14px;
   }
-
 
   .category-item {
-    gap: 7px;
+    gap: 5px;
   }
 
-
-  /*
-    모바일 화면이 작아지면
-    아이콘도 자동으로 같이 작아짐
-  */
   .category-image {
-    width: clamp(48px, 15vw, 64px);
-    height: clamp(48px, 15vw, 64px);
+    width: clamp(52px, 15vw, 62px);
+    height: clamp(52px, 15vw, 62px);
   }
-
 
   .category-name {
     font-size: clamp(10px, 2.8vw, 11px);
   }
 
 }
-
-
 
 /* =========================
    신작도서
@@ -538,11 +596,14 @@ img {
 
 @media screen and (max-width: 600px) {
 
-  .new-books {
-    /* 모바일은 정상 간격 */
-    margin-top: 0;
+  .main {
+    margin: 0;
+    padding: 0;
+  }
 
-    padding: 16px 20px 40px;
+  .new-books {
+    margin-top: 0;
+    padding: 24px 20px 40px;
   }
 
   .section-header {
