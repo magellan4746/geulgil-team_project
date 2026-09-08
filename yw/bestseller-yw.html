@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="./css-yw/common-yw.css">
   <link rel="stylesheet" href="./css-yw/bestseller.css">
   <link rel="stylesheet" href="./css-yw/header-yw.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +29,7 @@
     </nav>
     <div class="cardlist-wrap">
       <ul class="bestseller-list">
-        <li class="bestseller-item swiper-slide">
+        <li class="bestseller-item">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/ceneca.jpg" alt="세네카, 오늘을 빼앗기고 있는 당신에게">
@@ -40,9 +38,14 @@
             <div class="book-info">
               <p class="book-rank">1</p>
               <p class="book-title">세네카, 오늘을 빼앗기고 있는 당신에게</p>
-              <p class="book-creators">루키우스 안나이우스 세네카 저/하와이 대저택 역</p>
+              <div class="book-creators">
+                <p class="empty-line">루키우스 안나이우스 세네카 저</p>
+                <span></span>
+                <p class="empty-line"></p>
+                <span>/</span>
+                <p class="empty-line">하와이 대저택 역</p>
+              </div>
               <p class="book-publisher">논픽션</p>
-
               <div class="book-rating">
                 <img class="book-rating-icon" src="./img-yw/icn-star.svg" alt="" aria-hidden="true">
                 <strong class="book-rating-score">8.7</strong>
@@ -53,7 +56,7 @@
             </div>
           </article>
         </li>
-        <li class="swiper-slide bestseller-item">
+        <li class="bestseller-item">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/The-Odyssey.jpg" alt="오디세이아">
@@ -62,9 +65,14 @@
             <div class="book-info">
               <p class="book-rank">2</p>
               <p class="book-title">오디세이아</p>
-              <p class="book-creators">호메로스 저/페테르 파울 루벤스 그림/박문재 역</p>
+              <div class="book-creators">
+                <p class="empty-line">호메로스 저</p>
+                <span>/</span>
+                <p class="empty-line">페테르 파울 루벤스 그림</p>
+                <span>/</span>
+                <p class="empty-line">박문재 역</p>
+              </div>
               <p class="book-publisher">현대지성</p>
-
               <div class="book-rating">
                 <img class="book-rating-icon" src="./img-yw/icn-star.svg" alt="" aria-hidden="true">
                 <strong class="book-rating-score">9.7</strong>
@@ -75,7 +83,7 @@
             </div>
           </article>
         </li>
-        <li class="swiper-slide bestseller-item">
+        <li class="bestseller-item">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/I-Wrote-That-It-Happened.jpg" alt="그랬다고 적었다">
@@ -84,7 +92,13 @@
             <div class="book-info">
               <p class="book-rank">3</p>
               <p class="book-title">그랬다고 적었다</p>
-              <p class="book-creators">김애란 저</p>
+              <div class="book-creators">
+                <p>김애란 저</p>
+                <span></span>
+                <p class="empty-line"></p>
+                <span></span>
+                <p class="empty-line"></p>
+              </div>
               <p class="book-publisher">문학동네</p>
 
               <div class="book-rating">
@@ -97,7 +111,7 @@
             </div>
           </article>
         </li>
-        <li class="swiper-slide bestseller-item">
+        <li class="bestseller-item hidden">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/zziny.jpg" alt="찌니주의보">
@@ -106,7 +120,13 @@
             <div class="book-info">
               <p class="book-rank">4</p>
               <p class="book-title">찌니주의보</p>
-              <p class="book-creators">정지아 저</p>
+              <div class="book-creators">
+                <p class="empty-line">정지아 저</p>
+                <span></span>
+                <p class="empty-line"></p>
+                <span></span>
+                <p class="empty-line"></p>
+              </div>
               <p class="book-publisher">창비</p>
 
               <div class="book-rating">
@@ -119,7 +139,7 @@
             </div>
           </article>
         </li>
-        <li class="swiper-slide bestseller-item">
+        <li class="bestseller-item hidden">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/The-Odyssey-2.jpg" alt="오뒷세이아">
@@ -128,7 +148,13 @@
             <div class="book-info">
               <p class="book-rank">5</p>
               <p class="book-title">오뒷세이아</p>
-              <p class="book-creators">호메로스 저/김헌 역</p>
+              <div class="book-creators">
+                <p class="empty-line">호메로스 저</p>
+                <span></span>
+                <p class="empty-line"></p>
+                <span>/</span>
+                <p class="empty-line">김헌 역</p>
+              </div>
               <p class="book-publisher">을유문화사</p>
 
               <div class="book-rating">
@@ -141,7 +167,7 @@
             </div>
           </article>
         </li>
-        <li class="swiper-slide bestseller-item">
+        <li class="bestseller-item hidden">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/Siddhartha.jpg" alt="싯다르타">
@@ -150,9 +176,14 @@
             <div class="book-info">
               <p class="book-rank">6</p>
               <p class="book-title">싯다르타</p>
-              <p class="book-creators">헤르만 헤세 저/박병덕 역</p>
+              <div class="book-creators">
+                <p class="empty-line">헤르만 헤세 저</p>
+                <span></span>
+                <p class="empty-line"></p>
+                <span>/</span>
+                <p class="empty-line">박병덕 역</p>
+              </div>
               <p class="book-publisher">민음사</p>
-
               <div class="book-rating">
                 <img class="book-rating-icon" src="./img-yw/icn-star.svg" alt="" aria-hidden="true">
                 <strong class="book-rating-score">9.5</strong>
@@ -163,7 +194,7 @@
             </div>
           </article>
         </li>
-        <li class="swiper-slide bestseller-item">
+        <li class="bestseller-item hidden">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/Greek-and-Roman Mythology-Vol. 15.jpg" alt="처음 읽는 그리스 로마 신화 15">
@@ -172,7 +203,13 @@
             <div class="book-info">
               <p class="book-rank">7</p>
               <p class="book-title">처음 읽는 그리스 로마 신화 15</p>
-              <p class="book-creators">최설희 저/한현동 그림/정수영 역</p>
+              <div class="book-creators">
+                <p class="empty-line">최설희 저</p>
+                <span></span>
+                <p class="empty-line">한현동 그림</p>
+                <span></span>
+                <p class="empty-line">정수영 역</p>
+              </div>
               <p class="book-publisher">미래엔아이세움</p>
 
               <div class="book-rating">
@@ -185,7 +222,7 @@
             </div>
           </article>
         </li>
-        <li class="swiper-slide bestseller-item">
+        <li class="bestseller-item hidden">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/mosoon.jpg" alt="모순">
@@ -194,9 +231,14 @@
             <div class="book-info">
               <p class="book-rank">8</p>
               <p class="book-title">모순</p>
-              <p class="book-creators">양귀자 저</p>
+              <div class="book-creators">
+                <p class="empty-line">양귀자 저</p>
+                <span></span>
+                <p class="empty-line"></p>
+                <span>/</span>
+                <p class="empty-line"></p>
+              </div>
               <p class="book-publisher">쓰다</p>
-
               <div class="book-rating">
                 <img class="book-rating-icon" src="./img-yw/icn-star.svg" alt="" aria-hidden="true">
                 <strong class="book-rating-score">9.6</strong>
@@ -207,7 +249,7 @@
             </div>
           </article>
         </li>
-        <li class="swiper-slide bestseller-item hidden">
+        <li class="bestseller-item hidden">
           <article class="book-card">
             <figure class="book-image">
               <img class="book-cover" src="./img-yw/Nietzsche.jpg" alt="니체의 초월자">
@@ -216,9 +258,14 @@
             <div class="book-info">
               <p class="book-rank">9</p>
               <p class="book-title">니체의 초월자</p>
-              <p class="book-creators">프리드리히 니체 저/김철</p>
+              <div class="book-creators">
+                <p class="empty-line">프리드리히 니체 저</p>
+                <span></span>
+                <p class="empty-line"></p>
+                <span>/</span>
+                <p class="empty-line">김철 역</p>
+              </div>
               <p class="book-publisher">히읏</p>
-
               <div class="book-rating">
                 <img class="book-rating-icon" src="./img-yw/icn-star.svg" alt="" aria-hidden="true">
                 <strong class="book-rating-score">9.7</strong>
@@ -230,34 +277,7 @@
           </article>
         </li>
       </ul>
-      <!-- Initialize Swiper -->
-      <script>
-        const cardlist = new Swiper('.cardlist-wrap', {
-          breakpoints: {
-            0: {
-              slidesPerView: 1.2,
-              spaceBetween: 12,
-            },
-            340: {
-              slidesPerView: 2.2,
-              spaceBetween: 12,
-            },
-            768: {
-              slidesPerView: 3.2,
-              spaceBetween: 14,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 16,
-            }
-          },
-          autoplay: {
-            delay: 3000
-          }
-        });
-      </script>
     </div>
-
   </section>
 </body>
 
