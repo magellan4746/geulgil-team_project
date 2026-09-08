@@ -11,14 +11,15 @@ body {
 /* PC 기준: 1920 × 759 */
 .hero-banner {
     position: relative;
-    width: 1920px;
     height: 759px;
     margin: 0 auto;
-    overflow: hidden;
     background: #f7f0e8;
 }
-
+.swiper-slide>a{
+    width: 100%;
+}
 .hero-slide {
+    
     position: absolute;
     inset: 0;
     display: block;
@@ -34,11 +35,9 @@ body {
 }
 
 .hero-slide img {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
 
@@ -615,8 +614,12 @@ button {
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
+
     .hero-banner {
         margin-top: 10rem;
+        width: 100%;
+        height: 900px;
+
     }
 
     .main-categories__inner {
@@ -672,6 +675,12 @@ button {
 ================================================== */
 
 @media screen and (max-width: 768px) {
+    .hero-banner {
+        margin-top: 10rem;
+        width: 100%;
+        height: 900px;
+
+    }
 
     .main-categories__inner {
         padding: 2rem 1rem;
@@ -735,6 +744,8 @@ button {
 @media screen and (max-width: 600px) {
     .hero-banner {
         margin-top: 8rem;
+        width: 100%;
+        height: 900px;
     }
 
 
@@ -804,6 +815,12 @@ button {
     .book-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+
+    }
+    .hero-banner {
+        margin-top: 10rem;
+        width: 100%;
+        height: 500px;
 
     }
 }
