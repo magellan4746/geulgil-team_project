@@ -1,0 +1,131 @@
+.login-section {
+    margin-top: 12rem;
+    
+}
+
+.login-section>.common-frame,
+.login-section>.common-frame>.login-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-logo {
+    margin-bottom: 1rem;
+    font-weight: var(--fw2);
+    color: var(--black-700);
+}
+
+.login-logo>img {
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+
+.login-logo p {
+    font-size: var(--fs-h2);
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.input input {
+    width: 24rem;
+    height: 1.1rem;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: var(--fs-body1);
+
+}
+
+.user-id,
+.user-pw {
+    
+    overflow: hidden;
+    border: 1px solid var(--black-300);
+    border-radius: 0.5rem;
+}
+
+.login-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-btn-login, .login-btn-register{
+    width: 26rem;
+    height: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    font-weight: var(--fw2);
+}
+.login-btn-login{
+    color: #fff;
+    background-color: var(--maincolors-navyblue);
+}
+.login-btn-register{
+    border: 1px solid var(--black-500);
+    border-radius: 0.5rem;
+    color: var(--black-700);
+}
+
+.acn-assist{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+}
+.acn-assist a{
+    color: var(--black-500);
+}
+.height-line{
+    border-left: 1px solid var(--black-500);
+}
+.login-with{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+}
+.login-with a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26rem;
+    height: 3.2rem;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: var(--fw2);
+    
+}
+.login-with a:nth-of-type(1){
+    background-color: #FEE500;
+}
+.login-with a:nth-of-type(2){
+    background-color: #03C75A;
+    color: #fff;
+}
+.login-with a:nth-of-type(3){
+    background-color: #fff;
+    border: 1px solid var(--black-700);
+    color: var(--black-800);
+}
+.none-register{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.none-register span{
+    color: var(--black-500);
+}
+.none-register img{
+    height: 0.5rem;
+}
