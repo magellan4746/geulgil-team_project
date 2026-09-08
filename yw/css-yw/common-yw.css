@@ -82,6 +82,11 @@ section{
     padding: 0 0;
 }
 
+footer{
+    margin: 0 0;
+    padding: 0 0;
+}
+
 .common-frame{
     padding: 0 var(--space-2x-large);
 }
