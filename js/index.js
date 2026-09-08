@@ -1,17 +1,58 @@
-const slides = [...document.querySelectorAll(".hero-slide")];
+const slideGroups = [
+  ...document.querySelectorAll(".hero-banner > .swiper-slide")
+];
+
 const intervalTime = 2000;
 let currentIndex = 0;
 
-function showSlide(nextIndex) {
-  slides[currentIndex].classList.remove("is-active");
+function getVisibleSlide(group) {
+  const variants = [...group.querySelectorAll(".hero-slide")];
 
-  currentIndex = nextIndex;
+  return variants.find((slide) => {
+    const image = slide.querySelector("img");
 
-  slides[currentIndex].classList.add("is-active");
+    return image && window.getComputedStyle(image).display !== "none";
+  });
 }
 
+function activateVisibleSlide(group) {
+  const visibleSlide = getVisibleSlide(group);
+
+  group.querySelectorAll(".hero-slide").forEach((slide) => {
+    slide.classList.remove("is-active");
+  });
+
+  if (visibleSlide) {
+    visibleSlide.classList.add("is-active");
+  }
+}
+
+function showSlide(nextIndex) {
+  currentIndex = nextIndex;
+
+  slideGroups.forEach((group, index) => {
+    if (index === currentIndex) {
+      activateVisibleSlide(group);
+    } else {
+      group.querySelectorAll(".hero-slide").forEach((slide) => {
+        slide.classList.remove("is-active");
+      });
+    }
+  });
+}
+
+// 처음 로드될 때 현재 화면 크기에 맞는 이미지 활성화
+showSlide(0);
+
+// 화면 크기가 변경되면 현재 슬라이드의 반응형 이미지 재설정
+window.addEventListener("resize", () => {
+  activateVisibleSlide(slideGroups[currentIndex]);
+});
+
+// 슬라이드 자동 재생
 setInterval(() => {
-  const nextIndex = (currentIndex + 1) % slides.length;
+  const nextIndex = (currentIndex + 1) % slideGroups.length;
+
   showSlide(nextIndex);
 }, intervalTime);
 
