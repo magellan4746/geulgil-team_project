@@ -198,11 +198,10 @@
 
 .review-section {
     width: 100%;
-    max-width: 1600px;
 
     margin: 0 auto;
 
-    padding: 70px 40px 100px;
+    padding: 4rem 2.5rem 6.25rem;
 
     color: #222;
 }
@@ -346,7 +345,10 @@
 
     min-width: 130px;
 }
+.review-stars>button img{
+    height: 3rem;
 
+}
 .review-buyer-label {
     margin-bottom: 14px;
 
