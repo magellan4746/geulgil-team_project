@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/shopping-purchase.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
     <script src="./js/header.js" defer></script>
 
@@ -536,77 +537,82 @@
         <div class="common-frame">
 
             <div class="review-related">
-    
+
                 <h3 class="review-related-title">
                     ‘마이 셀렉트’에 함께 추가 된 책
                 </h3>
-    
+
                 <div class="review-related-list">
-    
+
                     <article class="review-related-book">
                         <img src="./img/ath-book1.png" alt="오뒷세이아">
                         <p class="review-related-name">오뒷세이아</p>
                     </article>
-    
+
                     <article class="review-related-book">
                         <img src="./img/ath-book2.png" alt="일상 질문 사전">
                         <p class="review-related-name">
                             일상 질문 사전 : 100가지 질문으로 일상을 다르게 보고...
                         </p>
                     </article>
-    
+
                     <article class="review-related-book">
                         <img src="./img/ath-book3.png" alt="모순">
                         <p class="review-related-name">모순</p>
                     </article>
-    
+
                     <article class="review-related-book">
                         <img src="./img/ath-book4.png" alt="위버멘쉬">
                         <p class="review-related-name">위버멘쉬</p>
                     </article>
-    
+
                     <article class="review-related-book">
                         <img src="./img/ath-book5.png" alt="프로젝트 헤일메리">
                         <p class="review-related-name">프로젝트 헤일메리</p>
                     </article>
-    
+
                 </div>
-    
+
             </div>
-    
-    
+
+
             <div class="review-divider"></div>
-    
-    
+
+
             <div class="review-rating-area">
-    
+
                 <div class="review-my-rating">
-    
+
                     <h2 class="review-rating-title">
                         이 책을 평가해주세요!
                     </h2>
-    
+
                     <div class="review-stars" id="reviewStars" aria-label="별점 선택">
-                        <button type="button" class="review-star" data-value="1"><img src="./img/icn-revw-star-filled.svg" alt="평점 별"></button>
-                        <button type="button" class="review-star" data-value="2"><img src="./img/icn-revw-star-filled.svg" alt="평점 별"></button>
-                        <button type="button" class="review-star" data-value="3"><img src="./img/icn-revw-star-filled.svg" alt="평점 별"></button>
-                        <button type="button" class="review-star" data-value="4"><img src="./img/icn-revw-star-filled.svg" alt="평점 별"></button>
-                        <button type="button" class="review-star" data-value="5"><img src="./img/icn-revw-star-filled.svg" alt="평점 별"></button>
+                        <button type="button" class="review-star" data-value="1"><img
+                                src="./img/icn-revw-star-filled.svg" alt="평점 별"></button>
+                        <button type="button" class="review-star" data-value="2"><img
+                                src="./img/icn-revw-star-filled.svg" alt="평점 별"></button>
+                        <button type="button" class="review-star" data-value="3"><img
+                                src="./img/icn-revw-star-filled.svg" alt="평점 별"></button>
+                        <button type="button" class="review-star" data-value="4"><img
+                                src="./img/icn-revw-star-filled.svg" alt="평점 별"></button>
+                        <button type="button" class="review-star" data-value="5"><img
+                                src="./img/icn-revw-star-filled.svg" alt="평점 별"></button>
                     </div>
-    
+
                 </div>
-    
-    
+
+
                 <div class="review-buyer-rating">
-    
+
                     <span class="review-buyer-label">
                         구매자 별점
                     </span>
-    
+
                     <strong class="review-buyer-score">
                         0.0
                     </strong>
-    
+
                     <div class="review-buyer-stars">
                         <img src="./img/icn-revw-star-nofilled.svg" alt="">
                         <img src="./img/icn-revw-star-nofilled.svg" alt="">
@@ -614,88 +620,88 @@
                         <img src="./img/icn-revw-star-nofilled.svg" alt="">
                         <img src="./img/icn-revw-star-nofilled.svg" alt="">
                     </div>
-    
+
                 </div>
-    
+
             </div>
-    
-    
+
+
             <div class="review-write">
-    
+
                 <textarea id="reviewText" maxlength="500"
                     placeholder="리뷰 작성 시 광고 및 욕설, 비속어나 타인을 비방하는 문구를 사용하시면 비공개될 수 있습니다."></textarea>
-    
+
             </div>
             <div class="review-actions">
-    
+
                 <button type="button" class="review-warning-btn" id="reviewWarningBtn">
                     ⚠ 리뷰 작성 유의사항
                 </button>
-    
-    
+
+
                 <div class="review-actions-right">
-    
+
                     <label class="review-spoiler">
                         <input type="checkbox" id="spoilerCheck">
                         <span>스포일러가 있습니다.</span>
                     </label>
-    
+
                     <button type="button" class="review-submit-btn" id="reviewSubmitBtn">
                         리뷰 남기기
                     </button>
-    
+
                 </div>
-    
+
             </div>
-    
-    
+
+
             <!-- =========================
            리뷰 정렬
       ========================== -->
             <div class="review-filter">
-    
+
                 <div class="review-filter-left">
-    
+
                     <button type="button" class="review-filter-btn is-active" data-filter="buyer">
                         구매자
                     </button>
-    
+
                     <button type="button" class="review-filter-btn" data-filter="all">
                         전체
                     </button>
-    
+
                 </div>
-    
-    
+
+
                 <div class="review-sort">
-    
+
                     <button type="button" class="review-sort-btn is-active" data-sort="latest">
                         최신순
                     </button>
-    
+
                     <button type="button" class="review-sort-btn" data-sort="like">
                         공감순
                     </button>
-    
+
                     <button type="button" class="review-sort-btn" data-sort="high">
                         별점 높은순
                     </button>
-    
+
                     <button type="button" class="review-sort-btn" data-sort="low">
                         별점 낮은순
                     </button>
-    
+
                 </div>
-    
+
             </div>
-    
-    
+
+
             <!-- =========================
            리뷰 목록
       ========================== -->
             <div class="review-list" id="reviewList">
-        </div>
-        
+            </div>
+
 
             <!-- 리뷰가 없을 때 -->
             <div class="review-empty" id="reviewEmpty">
@@ -706,7 +712,117 @@
         </div>
         <script src="./js/shopping-purchase-review.js"></script>
     </section>
+    <!-- 푸터 -->
+    <footer>
+        <div class="footer-frame">
+            <div class="footer-upper">
+                <div class="foot-left">
+                    <div class="foot-list-1">
+                        <div class="logof">
+                            <img src="./img/logo.svg" alt="글길 로고">
+                            <div class="slogan">Read More. Talk More. Connect.</div>
+                            <div class="brand-desc">책과 사람, 그리고 새로운 생각이 만나는 곳.<br>
+                                읽는 순간을 넘어, 읽은 뒤의 이야기를 이어가는 독서 플랫폼입니다.</div>
+                        </div>
+                        <div class="footmenu-wrap">
+                            <ul class="footmenu pc">
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li class="stli"><a href="#">개인정보 취급방법</a></li>
+                                <li><a href="#">이용안내</a></li>
+                                <li><a href="#">입점안내</a></li>
+                                <li><a href="#">서점제휴</a></li>
+                                <li><a href="#">기타제휴</a></li>
+                            </ul>
+                            <ul class="footmenu tap">
+                                <div class="fm-upper">
+                                    <li><a href="#">회사소개</a></li>
+                                    <li><a href="#">이용약관</a></li>
+                                    <li class="stli"><a href="#">개인정보 취급방법</a></li>
+                                    <li><a href="#">이용안내</a></li>
+                                </div>
+                                <div class="fm-bottom">
+                                    <li><a href="#">입점안내</a></li>
+                                    <li><a href="#">서점제휴</a></li>
+                                    <li><a href="#">기타제휴</a></li>
+                                </div>
+                            </ul>
 
+                            <ul class="coinfo">
+                                <div class="coinfo-list">
+                                    <li>법인명(상호) : 글길 주식회사</li>
+                                    <li>주소 : 서울특별시 강남구 포트폴리오로 328, GG BUILDING 8F</li>
+                                </div>
+                                <div class="coinfo-list">
+                                    <li>대표자 : 성선예</li>
+                                    <li>대표 전화 : 070-4321-9876</li>
+                                    <li>개인정보관리책임자 : 성선예(SungY@geulgil.kr)</li>
+                                </div>
+                                <div class="coinfo-list mo">
+                                    <div class="direction-row">
+                                        <li>대표자 : 성선예</li>
+                                        <li>대표 전화 : 070-4321-9876</li>
+                                    </div>
+                                    <li>개인정보관리책임자 : 성선예(SungY@geulgil.kr)</li>
+                                </div>
+                                <div class="coinfo-list">
+                                    <li>사업자 등록 번호: 111-22-33333</li>
+                                    <li>통신 판매업 신고: 111-22-33333</li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-right">
+                    <div class="foot-list-2">
+                        <dl class="account">
+                            <dt class="stli">Account info</dt>
+                            <dd>글길은행 998877-66-554433<br br class="desktop-br">(예금주: 글길 주식회사)</dd>
+                        </dl>
+                        <table class="community-list">
+                            <caption>Community</caption>
+                            <tr class="community-title stli">
+                                <th colspan="2">커뮤니티</th>
+                            </tr>
+                            <tr class="community-info">
+                                <td>공지사항</td>
+                                <td>회원가입</td>
+                                <td>FAQ</td>
+                                <td>로그인</td>
+                                <td>상품 Q&A</td>
+                                <td>마이페이지</td>
+                                <td>글길의 책</td>
+                                <td>주문조회</td>
+                                <td>이벤트</td>
+                            </tr>
+                        </table>
+                        <div class="sns tap">
+                            <li><a href="#"><img src="./img-/selfhst_instagram.svg" alt="글길 인스타그램 바로가기"></a></li>
+                            <li><a href="#"><img src="./img-/selfhst_youtube.svg" alt="글길 유튜브  바로가기"></a></li>
+                        </div>
+                        <dl class="account tap">
+                            <dt class="stli">Account info</dt>
+                            <dd>글길은행 998877-66-554433<br class="desktop-br">(예금주: 글길 주식회사)</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-bottom tap">
+                <div class="copy tap stli">
+                    © 2026 GEUGIL Furniture. All Rights Reserved.<br>취업용도의 포트폴리오 홈페이지입니다.
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <div class="copy stli">
+                    © 2026 GEUGIL Furniture. All Rights Reserved.<br>취업용도의 포트폴리오 홈페이지입니다.
+                </div>
+                <div class="sns">
+                    <li><a href="#"><img src="./img/selfhst_instagram.svg" alt="글길 인스타그램 바로가기"></a></li>
+                    <li><a href="#"><img src="./img/selfhst_youtube.svg" alt="글길 유튜브  바로가기"></a></li>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

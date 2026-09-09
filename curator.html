@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/curator.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <script src="./js/header.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@14/swiper-bundle.min.js"></script>
@@ -422,751 +423,864 @@
             </div>
         </div>
     </div>
-    <!-- 에디터 설렉터 -->
-    <section class="con1 editor-select">
-        <div class="common-frame">
-
-            <!-- 글길 에디터 추천 섹션 위 영역 -->
-            <div class="es-upper">
+    <main>
+        <!-- 에디터 설렉터 -->
+        <section class="con1 editor-select">
+            <div class="common-frame">
     
-                <!-- 글길 에디터 추천 제목 -->
-                <div class="es-header">
-                    <div class="es-title">
-                        <a href="#" class="es-link">
-                            <img class="es-arrow" src="./img/icn-arrow-left.svg" alt="" aria-hidden="true">
-                            <span>글길 에디터 추천</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- 글길 에디터 추천 섹션 아래 영역 -->
-            <div class="es-bottom">
-                <!-- 그리드 상단 메뉴 -->
-                <div class="es-menu">
-                    <div class="menu-bar-wrap">
-                        <di class="menu-bar">
-                            <li>전체</li>
-                            <li>에디터 픽</li>
-                            <li>오디오 북</li>
-                            <li>지금 읽을 책</li>
-                        </di>
-                        <div class="emty"></div>
-                    </div>
-                    <div class="count-wrap">
-                        <span>총</span>
-                        <div class="count">
-                            <p>20</p>
-                            <span>개</span>
+                <!-- 글길 에디터 추천 섹션 위 영역 -->
+                <div class="es-upper">
+        
+                    <!-- 글길 에디터 추천 제목 -->
+                    <div class="es-header">
+                        <div class="es-title">
+                            <a href="#" class="es-link">
+                                <img class="es-arrow" src="./img/icn-arrow-left.svg" alt="" aria-hidden="true">
+                                <span>글길 에디터 추천</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- 게시글 그리드 -->
-                <ul class="grid-list">
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/editor_pick_01.jpg" alt="이 책을 읽고 나는 다시 태어났다">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>에디터 픽</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>이 책을 읽고 나는 다시 태어났다</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/audiobook-thumbnail-01.jpg" alt="판타지 소설에 빠지다. 대작 만날 준비됐나요?">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>오디오 북</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>판타지 소설에 빠지다. 대작 만날 준비됐나요?</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/geulgil_now_reading_01_thumbnail.jpg" alt="이 책을 읽고 나는 다시 태어났다">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>지금 읽을 책</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>주인공보다 자꾸 눈길 가는 조연들</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/editor_pick_02.jpg" alt="여름이 되면 자꾸 마음이 가는 책">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>에디터 픽</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>여름이 되면 자꾸 마음이 가는 책</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/audiobook-thumbnail-02.jpg" alt="고전 로맨스의 맛. 짙은 사랑을 들어보세요.">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>오디오 북</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>고전 로맨스의 맛. 짙은 사랑을 들어보세요.</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/geulgil_now_reading_02_thumbnail.png" alt="첫 문장부터 이미 끝난 사랑이었다">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>지금 읽을 책</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>첫 문장부터 이미 끝난 사랑이었다</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/editor_pick_03.jpg" alt="독서모임/교환 독서하기 좋은 책 4권">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>에디터 픽</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>독서모임/교환 독서하기 좋은 책 4권</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/audiobook-thumbnail-03.jpg" alt="출근길에 귀로 독서해 보는 건 어때요?">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>오디오 북</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>출근길에 귀로 독서해 보는 건 어때요?</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/geulgil_now_reading_03_thumbnail.jpg" alt="이 책을 읽고 나는 다시 태어났다">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>지금 읽을 책</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>여행은 못 가도 마음은 먼저 떠나볼까요</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/editor_pick_04.jpg" alt="에디터 픽 인생의 멘토가 되어주는 책 4권">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>에디터 픽</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>에디터 픽 인생의 멘토가 되어주는 책 4권</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/audiobook-thumbnail-04.jpg" alt="지친 마음엔 힐링 판타지를">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>오디오 북</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>지친 마음엔 힐링 판타지를</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/geulgil_now_reading_04_thumbnail.jpg"
-                                    alt="우리의 방과 후를 책임졌던 ‘레전드 만화책들’">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>지금 읽을 책</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>우리의 방과 후를 책임졌던 ‘레전드 만화책들’</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/audiobook-thumbnail-05.jpg" alt="책태기가 왔다고? 극복하는 책 4권">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>에디터 픽</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>책태기가 왔다고? 극복하는 책 4권</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/audiobook-thumbnail-05.jpg" alt="오디오북 초심자를 위한 이달의 오디오북">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>오디오 북</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>오디오북 초심자를 위한 이달의 오디오북</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/geulgil_now_reading_05_thumbnail.jpg"
-                                    alt="한 페이지만 읽으려다 밤새게 되는 작가들의 독서 취향">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>지금 읽을 책</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>한 페이지만 읽으려다 밤새게 되는 작가들의 독서 취향</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/editor_pick_06.jpg" alt="오늘의 문장을 발견하는 시간">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>에디터 픽</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>오늘의 문장을 발견하는 시간</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/audiobook-thumbnail-06.jpg" alt="반박 불가 불멸의 명작을 오디오로 듣다">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>오디오 북</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>반박 불가 불멸의 명작을 오디오로 듣다</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/geulgil_now_reading_06_thumbnail.jpg" alt="10년 후에도 다시 읽고 싶은 책">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>지금 읽을 책</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>10년 후에도 다시 읽고 싶은 책</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/editor_pick_07.jpg" alt="취향이 선명해지는 책 4권">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>에디터 픽</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>취향이 선명해지는 책 4권</dd>
-                            </a>
-                        </dl>
-                    </li>
-                    <li class="grid-list-item">
-                        <figure>
-                            <a href="#"><img src="./img/audiobook-thumbnail-07.jpg" alt="무더위는 끝! 스릴러 세편 어때요?">
-                            </a>
-                        </figure>
-                        <dl class="book-info">
-                            <a class="thum-menu" href="#">
-                                <dt>오디오 북</dt>
-                            </a>
-                            <a class="post-title" href="#">
-                                <dd>무더위는 끝! 스릴러 세편 어때요?</dd>
-                            </a>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- 회원 문답 도서 -->
-    <section class="con2">
-        <div class="common-frame">
-            <div class="section-title">
-                <div class="section-title-wrap">
-                    <div class="section-maintitle">
-                        이럴 땐 이런 책
+                <!-- 글길 에디터 추천 섹션 아래 영역 -->
+                <div class="es-bottom">
+                    <!-- 그리드 상단 메뉴 -->
+                    <div class="es-menu">
+                        <div class="menu-bar-wrap">
+                            <di class="menu-bar">
+                                <li>전체</li>
+                                <li>에디터 픽</li>
+                                <li>오디오 북</li>
+                                <li>지금 읽을 책</li>
+                            </di>
+                            <div class="emty"></div>
+                        </div>
+                        <div class="count-wrap">
+                            <span>총</span>
+                            <div class="count">
+                                <p>20</p>
+                                <span>개</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="section-title-icn">
-                        <a href="#">
-                            <img src="./img/icn-arrow right.svg" alt="더보기 아이콘">
-                        </a>
+                    <!-- 게시글 그리드 -->
+                    <ul class="grid-list">
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/editor_pick_01.jpg" alt="이 책을 읽고 나는 다시 태어났다">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>에디터 픽</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>이 책을 읽고 나는 다시 태어났다</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/audiobook-thumbnail-01.jpg" alt="판타지 소설에 빠지다. 대작 만날 준비됐나요?">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>오디오 북</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>판타지 소설에 빠지다. 대작 만날 준비됐나요?</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/geulgil_now_reading_01_thumbnail.jpg" alt="이 책을 읽고 나는 다시 태어났다">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>지금 읽을 책</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>주인공보다 자꾸 눈길 가는 조연들</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/editor_pick_02.jpg" alt="여름이 되면 자꾸 마음이 가는 책">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>에디터 픽</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>여름이 되면 자꾸 마음이 가는 책</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/audiobook-thumbnail-02.jpg" alt="고전 로맨스의 맛. 짙은 사랑을 들어보세요.">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>오디오 북</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>고전 로맨스의 맛. 짙은 사랑을 들어보세요.</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/geulgil_now_reading_02_thumbnail.png" alt="첫 문장부터 이미 끝난 사랑이었다">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>지금 읽을 책</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>첫 문장부터 이미 끝난 사랑이었다</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/editor_pick_03.jpg" alt="독서모임/교환 독서하기 좋은 책 4권">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>에디터 픽</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>독서모임/교환 독서하기 좋은 책 4권</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/audiobook-thumbnail-03.jpg" alt="출근길에 귀로 독서해 보는 건 어때요?">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>오디오 북</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>출근길에 귀로 독서해 보는 건 어때요?</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/geulgil_now_reading_03_thumbnail.jpg" alt="이 책을 읽고 나는 다시 태어났다">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>지금 읽을 책</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>여행은 못 가도 마음은 먼저 떠나볼까요</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/editor_pick_04.jpg" alt="에디터 픽 인생의 멘토가 되어주는 책 4권">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>에디터 픽</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>에디터 픽 인생의 멘토가 되어주는 책 4권</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/audiobook-thumbnail-04.jpg" alt="지친 마음엔 힐링 판타지를">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>오디오 북</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>지친 마음엔 힐링 판타지를</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/geulgil_now_reading_04_thumbnail.jpg"
+                                        alt="우리의 방과 후를 책임졌던 ‘레전드 만화책들’">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>지금 읽을 책</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>우리의 방과 후를 책임졌던 ‘레전드 만화책들’</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/audiobook-thumbnail-05.jpg" alt="책태기가 왔다고? 극복하는 책 4권">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>에디터 픽</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>책태기가 왔다고? 극복하는 책 4권</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/audiobook-thumbnail-05.jpg" alt="오디오북 초심자를 위한 이달의 오디오북">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>오디오 북</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>오디오북 초심자를 위한 이달의 오디오북</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/geulgil_now_reading_05_thumbnail.jpg"
+                                        alt="한 페이지만 읽으려다 밤새게 되는 작가들의 독서 취향">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>지금 읽을 책</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>한 페이지만 읽으려다 밤새게 되는 작가들의 독서 취향</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/editor_pick_06.jpg" alt="오늘의 문장을 발견하는 시간">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>에디터 픽</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>오늘의 문장을 발견하는 시간</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/audiobook-thumbnail-06.jpg" alt="반박 불가 불멸의 명작을 오디오로 듣다">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>오디오 북</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>반박 불가 불멸의 명작을 오디오로 듣다</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/geulgil_now_reading_06_thumbnail.jpg" alt="10년 후에도 다시 읽고 싶은 책">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>지금 읽을 책</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>10년 후에도 다시 읽고 싶은 책</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/editor_pick_07.jpg" alt="취향이 선명해지는 책 4권">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>에디터 픽</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>취향이 선명해지는 책 4권</dd>
+                                </a>
+                            </dl>
+                        </li>
+                        <li class="grid-list-item">
+                            <figure>
+                                <a href="#"><img src="./img/audiobook-thumbnail-07.jpg" alt="무더위는 끝! 스릴러 세편 어때요?">
+                                </a>
+                            </figure>
+                            <dl class="book-info">
+                                <a class="thum-menu" href="#">
+                                    <dt>오디오 북</dt>
+                                </a>
+                                <a class="post-title" href="#">
+                                    <dd>무더위는 끝! 스릴러 세편 어때요?</dd>
+                                </a>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- 회원 문답 도서 -->
+        <section class="con2">
+            <div class="common-frame">
+                <div class="section-title">
+                    <div class="section-title-wrap">
+                        <div class="section-maintitle">
+                            이럴 땐 이런 책
+                        </div>
+                        <div class="section-title-icn">
+                            <a href="#">
+                                <img src="./img/icn-arrow right.svg" alt="더보기 아이콘">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="con2-subtitle">회원이 묻고 답하는 도서 추천</div>
+                </div>
+                <div class="swiper con2-cardlist-wrap">
+                    <ul class="con2-cardlist swiper-wrapper">
+                        <li class="swiper-slide" id="blue">
+                            <a href="#">
+                                <div class="con2-quest">
+                                    <div class="con2-q-wrap">
+                                        <div class="con2-q-upper">
+                                            <div class="con2-first-badge">이주의 질문</div>
+                                            <div class="con2-badge-title">8월3주 질문 도착!</div>
+                                        </div>
+                                        <div class="con2-quest-subt">
+                                            이번 주에도 다양한 책 이야기가 도착했어요.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con2-user-q">
+                                    <div class="con2-user-info">
+                                        <div class="con2-user-info-wrap">
+                                            <div class="con2-user-icn">
+                                                <img src="./img/user-profile-icn1.png" alt="">
+                                            </div>
+                                            <div class="con2-user-id">
+                                                booklover_92
+                                            </div>
+                                        </div>
+                                        <div class="con2-user-q-txt">
+                                            요즘 읽을 책을 고르고 있는데,
+                                            가볍게 시작하기 좋은 소설이 있을까요?
+                                        </div>
+                                    </div>
+                                    <figure class="mini-book-cover">
+                                        <img src="./img/mini-book-cover1.png" alt="미니 북 커버">
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="yellow">
+                            <a href="#">
+                                <div class="con2-quest">
+                                    <div class="con2-q-wrap">
+                                        <div class="con2-q-upper">
+                                            <div class="con2-badge">인기</div>
+                                            <div class="con2-badge-title">너무나도 슬픈책</div>
+                                        </div>
+                                        <div class="con2-quest-subt">
+                                            읽고 나서 한동안 마음에 남았던 이야기
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con2-user-q">
+                                    <div class="con2-user-info">
+                                        <div class="con2-user-info-wrap">
+                                            <div class="con2-user-icn">
+                                                <img src="./img/user-profile-icn2.png" alt="">
+                                            </div>
+                                            <div class="con2-user-id">
+                                                김하늘
+                                            </div>
+                                        </div>
+                                        <div class="con2-user-q-txt">
+                                            최근에 정말 슬픈 책을 찾고 있는데, 마음껏 울 수 있는 책이 있다면 추천해주세요.
+                                        </div>
+                                    </div>
+                                    <figure class="mini-book-cover">
+                                        <img src="./img/mini-book-cover2.png" alt="미니 북 커버">
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="purple">
+                            <a href="#">
+                                <div class="con2-quest">
+                                    <div class="con2-q-wrap">
+                                        <div class="con2-q-upper">
+                                            <div class="con2-badge">인기</div>
+                                            <div class="con2-badge-title">우울함을 떨칠 좋은 책</div>
+                                        </div>
+                                        <div class="con2-quest-subt">
+                                            기분이 가라앉을 때 꺼내 읽는 책
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con2-user-q">
+                                    <div class="con2-user-info">
+                                        <div class="con2-user-info-wrap">
+                                            <div class="con2-user-icn">
+                                                <img src="./img/user-profile-icn3.png" alt="">
+                                            </div>
+                                            <div class="con2-user-id">
+                                                momo_reading
+                                            </div>
+                                        </div>
+                                        <div class="con2-user-q-txt">
+                                            요즘 조금 우울한 날이 많은데 기분을 전환할 수 있는 책이 궁금해요.
+                                        </div>
+                                    </div>
+                                    <figure class="mini-book-cover">
+                                        <img src="./img/mini-book-cover3.png" alt="미니 북 커버">
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="red">
+                            <a href="#">
+                                <div class="con2-quest">
+                                    <div class="con2-q-wrap">
+                                        <div class="con2-q-upper">
+                                            <div class="con2-badge">인기</div>
+                                            <div class="con2-badge-title">당신의 인생책은?</div>
+                                        </div>
+                                        <div class="con2-quest-subt">
+                                            한 권의 책이 삶을 바꾼 경험이 있나요?
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con2-user-q">
+                                    <div class="con2-user-info">
+                                        <div class="con2-user-info-wrap">
+                                            <div class="con2-user-icn">
+                                                <img src="./img/user-profile-icn4.png" alt="">
+                                            </div>
+                                            <div class="con2-user-id">
+                                                책읽는 여우
+                                            </div>
+                                        </div>
+                                        <div class="con2-user-q-txt">
+                                            지금까지 읽었던 책 중에서 다시 처음부터 읽고 싶은 책은 무엇인가요?
+                                        </div>
+                                    </div>
+                                    <figure class="mini-book-cover">
+                                        <img src="./img/mini-book-cover4.png" alt="미니 북 커버">
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="deepblue">
+                            <a href="#">
+                                <div class="con2-quest">
+                                    <div class="con2-q-wrap">
+                                        <div class="con2-q-upper">
+                                            <div class="con2-badge">인기</div>
+                                            <div class="con2-badge-title">글길을 처음 접하는 분에게</div>
+                                        </div>
+                                        <div class="con2-quest-subt">
+                                            처음 만나는 독서 커뮤니티를 위한 작은 안내
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con2-user-q">
+                                    <div class="con2-user-info">
+                                        <div class="con2-user-info-wrap">
+                                            <div class="con2-user-icn">
+                                                <img src="./img/user-profile-icn5.png" alt="">
+                                            </div>
+                                            <div class="con2-user-id">
+                                                글길지기
+                                            </div>
+                                        </div>
+                                        <div class="con2-user-q-txt">
+                                            글길을 처음 이용한다면 어떤 책부터 함께 읽어보면 좋을지 추천해주세요.
+                                        </div>
+                                    </div>
+                                    <figure class="mini-book-cover">
+                                        <img src="./img/mini-book-cover5.png" alt="미니 북 커버">
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="pink">
+                            <a href="#">
+                                <div class="con2-quest">
+                                    <div class="con2-q-wrap">
+                                        <div class="con2-q-upper">
+                                            <div class="con2-badge">인기</div>
+                                            <div class="con2-badge-title">공부가 재밌어지는 책</div>
+                                        </div>
+                                        <div class="con2-quest-subt">
+                                            배움의 즐거움을 다시 발견하는 시간
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con2-user-q">
+                                    <div class="con2-user-info">
+                                        <div class="con2-user-info-wrap">
+                                            <div class="con2-user-icn">
+                                                <img src="./img/user-profile-icn6.png" alt="">
+                                            </div>
+                                            <div class="con2-user-id">
+                                                study_with_book
+                                            </div>
+                                        </div>
+                                        <div class="con2-user-q-txt">
+                                            공부가 지루하게 느껴질 때 읽으면 재미있게 배울 수 있는 책이 있을까요?
+                                        </div>
+                                    </div>
+                                    <figure class="mini-book-cover">
+                                        <img src="./img/mini-book-cover6.png" alt="미니 북 커버">
+                                    </figure>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    const con2cardlist = new Swiper('.con2-cardlist-wrap', {
+                        breakpoints: {
+                            100: {
+                                slidesPerView: 'auto',
+                            },
+                            769: {
+                                slidesPerView: 'auto',
+                            },
+                            1024: {
+                                slidesPerView: 'auto',
+                            }
+                        }
+                    });
+                </script>
+            </div>
+        </section>
+        <!-- AI독파밍 -->
+        <section class="con3">
+            <div class="common-frame">
+                <div class="section-title">
+                    <div class="section-title-wrap">
+                        <div class="section-maintitle">
+                            AI와 함께 읽는 나를 일으킬 책들
+                        </div>
+                        <div class="section-title-icn">
+                            <a href="#">
+                                <img src="./img/icn-arrow right.svg" alt="더보기 아이콘">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="con2-subtitle">책의 핵심 정보만 쏙쏙 찾아주는 AI 독파밍</div>
+                </div>
+                <div class="swiper con3-cardlist-wrap">
+                    <ul class="con3-cardlist swiper-wrapper">
+                        <li class="swiper-slide" id="card-blue">
+                            <a href="#">
+                                <div class="con3-card-wrap">
+                                    <div class="con3-card-badge">
+                                        <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
+                                        <span>이 책의 질문</span>
+                                    </div>
+                                    <div class="con3-card-title">
+                                        <h4>명화 속 오디세우스를
+                                            찾아볼까요?</h4>
+                                    </div>
+                                    <div class="con3-card-bk-cover">
+                                        <img src="./img/con3-card-bk-cover1.png" alt="카드 북커버">
+                                    </div>
+                                    <div class="con3-card-btn">
+                                        <img src="./img/con3-card-btn-icn.svg" alt="">
+                                        <span>AI와 함께 읽기</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="card-green">
+                            <a href="#">
+                                <div class="con3-card-wrap">
+                                    <div class="con3-card-badge">
+                                        <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
+                                        <span>이 책의 질문</span>
+                                    </div>
+                                    <div class="con3-card-title">
+                                        <h4>당신이라면 어떻게 기억할까요?</h4>
+                                    </div>
+                                    <div class="con3-card-bk-cover">
+                                        <img src="./img/con3-card-bk-cover2.png" alt="카드 북커버">
+                                    </div>
+                                    <div class="con3-card-btn">
+                                        <img src="./img/con3-card-btn-icn.svg" alt="">
+                                        <span>AI와 함께 읽기</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="card-yellow">
+                            <a href="#">
+                                <div class="con3-card-wrap">
+                                    <div class="con3-card-badge">
+                                        <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
+                                        <span>이 책의 질문</span>
+                                    </div>
+                                    <div class="con3-card-title">
+                                        <h4>니체가 말한 ‘초월’은
+                                            우리에게 어떤 의미일까?</h4>
+                                    </div>
+                                    <div class="con3-card-bk-cover">
+                                        <img src="./img/con3-card-bk-cover3.png" alt="카드 북커버">
+                                    </div>
+                                    <div class="con3-card-btn">
+                                        <img src="./img/con3-card-btn-icn.svg" alt="">
+                                        <span>AI와 함께 읽기</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="card-purple">
+                            <a href="#">
+                                <div class="con3-card-wrap">
+                                    <div class="con3-card-badge">
+                                        <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
+                                        <span>이 책의 질문</span>
+                                    </div>
+                                    <div class="con3-card-title">
+                                        <h4>당신은 어떤
+                                            여정을 떠나고 싶나요?</h4>
+                                    </div>
+                                    <div class="con3-card-bk-cover">
+                                        <img src="./img/con3-card-bk-cover4.png" alt="카드 북커버">
+                                    </div>
+                                    <div class="con3-card-btn">
+                                        <img src="./img/con3-card-btn-icn.svg" alt="">
+                                        <span>AI와 함께 읽기</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="card-red">
+                            <a href="#">
+                                <div class="con3-card-wrap">
+                                    <div class="con3-card-badge">
+                                        <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
+                                        <span>이 책의 질문</span>
+                                    </div>
+                                    <div class="con3-card-title">
+                                        <h4>우리는 정말
+                                            시간이 부족한 걸까?</h4>
+                                    </div>
+                                    <div class="con3-card-bk-cover">
+                                        <img src="./img/con3-card-bk-cover5.png" alt="카드 북커버">
+                                    </div>
+                                    <div class="con3-card-btn">
+                                        <img src="./img/con3-card-btn-icn.svg" alt="">
+                                        <span>AI와 함께 읽기</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="card-blue">
+                            <a href="#">
+                                <div class="con3-card-wrap">
+                                    <div class="con3-card-badge">
+                                        <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
+                                        <span>이 책의 질문</span>
+                                    </div>
+                                    <div class="con3-card-title">
+                                        <h4>다른 마음이 공존할 때,
+                                            어떤 선택을 하게 될까?</h4>
+                                    </div>
+                                    <div class="con3-card-bk-cover">
+                                        <img src="./img/con3-card-bk-cover6.png" alt="카드 북커버">
+                                    </div>
+                                    <div class="con3-card-btn">
+                                        <img src="./img/con3-card-btn-icn.svg" alt="">
+                                        <span>AI와 함께 읽기</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide" id="card-scarlet">
+                            <a href="#">
+                                <div class="con3-card-wrap">
+                                    <div class="con3-card-badge">
+                                        <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
+                                        <span>이 책의 질문</span>
+                                    </div>
+                                    <div class="con3-card-title">
+                                        <h4>진정한 나를
+                                            어떻게 찾을까요?</h4>
+                                    </div>
+                                    <div class="con3-card-bk-cover">
+                                        <img src="./img/con3-card-bk-cover7.png" alt="카드 북커버">
+                                    </div>
+                                    <div class="con3-card-btn">
+                                        <img src="./img/con3-card-btn-icn.svg" alt="">
+                                        <span>AI와 함께 읽기</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    const con3cardlist = new Swiper('.con3-cardlist-wrap', {
+                        breakpoints: {
+                            100: {
+                                slidesPerView: 'auto',
+                            },
+                            769: {
+                                slidesPerView: 'auto',
+                            },
+                            1024: {
+                                slidesPerView: 'auto',
+                            }
+                        }
+                    });
+                </script>
+            </div>
+        </section>
+    </main>
+    <!-- 푸터 -->
+    <footer>
+        <div class="footer-frame">
+            <div class="footer-upper">
+                <div class="foot-left">
+                    <div class="foot-list-1">
+                        <div class="logof">
+                            <img src="./img/logo.svg" alt="글길 로고">
+                            <div class="slogan">Read More. Talk More. Connect.</div>
+                            <div class="brand-desc">책과 사람, 그리고 새로운 생각이 만나는 곳.<br>
+                                읽는 순간을 넘어, 읽은 뒤의 이야기를 이어가는 독서 플랫폼입니다.</div>
+                        </div>
+                        <div class="footmenu-wrap">
+                            <ul class="footmenu pc">
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li class="stli"><a href="#">개인정보 취급방법</a></li>
+                                <li><a href="#">이용안내</a></li>
+                                <li><a href="#">입점안내</a></li>
+                                <li><a href="#">서점제휴</a></li>
+                                <li><a href="#">기타제휴</a></li>
+                            </ul>
+                            <ul class="footmenu tap">
+                                <div class="fm-upper">
+                                    <li><a href="#">회사소개</a></li>
+                                    <li><a href="#">이용약관</a></li>
+                                    <li class="stli"><a href="#">개인정보 취급방법</a></li>
+                                    <li><a href="#">이용안내</a></li>
+                                </div>
+                                <div class="fm-bottom">
+                                    <li><a href="#">입점안내</a></li>
+                                    <li><a href="#">서점제휴</a></li>
+                                    <li><a href="#">기타제휴</a></li>
+                                </div>
+                            </ul>
+
+                            <ul class="coinfo">
+                                <div class="coinfo-list">
+                                    <li>법인명(상호) : 글길 주식회사</li>
+                                    <li>주소 : 서울특별시 강남구 포트폴리오로 328, GG BUILDING 8F</li>
+                                </div>
+                                <div class="coinfo-list">
+                                    <li>대표자 : 성선예</li>
+                                    <li>대표 전화 : 070-4321-9876</li>
+                                    <li>개인정보관리책임자 : 성선예(SungY@geulgil.kr)</li>
+                                </div>
+                                <div class="coinfo-list mo">
+                                    <div class="direction-row">
+                                        <li>대표자 : 성선예</li>
+                                        <li>대표 전화 : 070-4321-9876</li>
+                                    </div>
+                                    <li>개인정보관리책임자 : 성선예(SungY@geulgil.kr)</li>
+                                </div>
+                                <div class="coinfo-list">
+                                    <li>사업자 등록 번호: 111-22-33333</li>
+                                    <li>통신 판매업 신고: 111-22-33333</li>
+                                </div>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="con2-subtitle">회원이 묻고 답하는 도서 추천</div>
-            </div>
-            <div class="swiper con2-cardlist-wrap">
-                <ul class="con2-cardlist swiper-wrapper">
-                    <li class="swiper-slide" id="blue">
-                        <a href="#">
-                            <div class="con2-quest">
-                                <div class="con2-q-wrap">
-                                    <div class="con2-q-upper">
-                                        <div class="con2-first-badge">이주의 질문</div>
-                                        <div class="con2-badge-title">8월3주 질문 도착!</div>
-                                    </div>
-                                    <div class="con2-quest-subt">
-                                        이번 주에도 다양한 책 이야기가 도착했어요.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="con2-user-q">
-                                <div class="con2-user-info">
-                                    <div class="con2-user-info-wrap">
-                                        <div class="con2-user-icn">
-                                            <img src="./img/user-profile-icn1.png" alt="">
-                                        </div>
-                                        <div class="con2-user-id">
-                                            booklover_92
-                                        </div>
-                                    </div>
-                                    <div class="con2-user-q-txt">
-                                        요즘 읽을 책을 고르고 있는데,
-                                        가볍게 시작하기 좋은 소설이 있을까요?
-                                    </div>
-                                </div>
-                                <figure class="mini-book-cover">
-                                    <img src="./img/mini-book-cover1.png" alt="미니 북 커버">
-                                </figure>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="yellow">
-                        <a href="#">
-                            <div class="con2-quest">
-                                <div class="con2-q-wrap">
-                                    <div class="con2-q-upper">
-                                        <div class="con2-badge">인기</div>
-                                        <div class="con2-badge-title">너무나도 슬픈책</div>
-                                    </div>
-                                    <div class="con2-quest-subt">
-                                        읽고 나서 한동안 마음에 남았던 이야기
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="con2-user-q">
-                                <div class="con2-user-info">
-                                    <div class="con2-user-info-wrap">
-                                        <div class="con2-user-icn">
-                                            <img src="./img/user-profile-icn2.png" alt="">
-                                        </div>
-                                        <div class="con2-user-id">
-                                            김하늘
-                                        </div>
-                                    </div>
-                                    <div class="con2-user-q-txt">
-                                        최근에 정말 슬픈 책을 찾고 있는데, 마음껏 울 수 있는 책이 있다면 추천해주세요.
-                                    </div>
-                                </div>
-                                <figure class="mini-book-cover">
-                                    <img src="./img/mini-book-cover2.png" alt="미니 북 커버">
-                                </figure>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="purple">
-                        <a href="#">
-                            <div class="con2-quest">
-                                <div class="con2-q-wrap">
-                                    <div class="con2-q-upper">
-                                        <div class="con2-badge">인기</div>
-                                        <div class="con2-badge-title">우울함을 떨칠 좋은 책</div>
-                                    </div>
-                                    <div class="con2-quest-subt">
-                                        기분이 가라앉을 때 꺼내 읽는 책
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="con2-user-q">
-                                <div class="con2-user-info">
-                                    <div class="con2-user-info-wrap">
-                                        <div class="con2-user-icn">
-                                            <img src="./img/user-profile-icn3.png" alt="">
-                                        </div>
-                                        <div class="con2-user-id">
-                                            momo_reading
-                                        </div>
-                                    </div>
-                                    <div class="con2-user-q-txt">
-                                        요즘 조금 우울한 날이 많은데 기분을 전환할 수 있는 책이 궁금해요.
-                                    </div>
-                                </div>
-                                <figure class="mini-book-cover">
-                                    <img src="./img/mini-book-cover3.png" alt="미니 북 커버">
-                                </figure>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="red">
-                        <a href="#">
-                            <div class="con2-quest">
-                                <div class="con2-q-wrap">
-                                    <div class="con2-q-upper">
-                                        <div class="con2-badge">인기</div>
-                                        <div class="con2-badge-title">당신의 인생책은?</div>
-                                    </div>
-                                    <div class="con2-quest-subt">
-                                        한 권의 책이 삶을 바꾼 경험이 있나요?
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="con2-user-q">
-                                <div class="con2-user-info">
-                                    <div class="con2-user-info-wrap">
-                                        <div class="con2-user-icn">
-                                            <img src="./img/user-profile-icn4.png" alt="">
-                                        </div>
-                                        <div class="con2-user-id">
-                                            책읽는 여우
-                                        </div>
-                                    </div>
-                                    <div class="con2-user-q-txt">
-                                        지금까지 읽었던 책 중에서 다시 처음부터 읽고 싶은 책은 무엇인가요?
-                                    </div>
-                                </div>
-                                <figure class="mini-book-cover">
-                                    <img src="./img/mini-book-cover4.png" alt="미니 북 커버">
-                                </figure>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="deepblue">
-                        <a href="#">
-                            <div class="con2-quest">
-                                <div class="con2-q-wrap">
-                                    <div class="con2-q-upper">
-                                        <div class="con2-badge">인기</div>
-                                        <div class="con2-badge-title">글길을 처음 접하는 분에게</div>
-                                    </div>
-                                    <div class="con2-quest-subt">
-                                        처음 만나는 독서 커뮤니티를 위한 작은 안내
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="con2-user-q">
-                                <div class="con2-user-info">
-                                    <div class="con2-user-info-wrap">
-                                        <div class="con2-user-icn">
-                                            <img src="./img/user-profile-icn5.png" alt="">
-                                        </div>
-                                        <div class="con2-user-id">
-                                            글길지기
-                                        </div>
-                                    </div>
-                                    <div class="con2-user-q-txt">
-                                        글길을 처음 이용한다면 어떤 책부터 함께 읽어보면 좋을지 추천해주세요.
-                                    </div>
-                                </div>
-                                <figure class="mini-book-cover">
-                                    <img src="./img/mini-book-cover5.png" alt="미니 북 커버">
-                                </figure>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="pink">
-                        <a href="#">
-                            <div class="con2-quest">
-                                <div class="con2-q-wrap">
-                                    <div class="con2-q-upper">
-                                        <div class="con2-badge">인기</div>
-                                        <div class="con2-badge-title">공부가 재밌어지는 책</div>
-                                    </div>
-                                    <div class="con2-quest-subt">
-                                        배움의 즐거움을 다시 발견하는 시간
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="con2-user-q">
-                                <div class="con2-user-info">
-                                    <div class="con2-user-info-wrap">
-                                        <div class="con2-user-icn">
-                                            <img src="./img/user-profile-icn6.png" alt="">
-                                        </div>
-                                        <div class="con2-user-id">
-                                            study_with_book
-                                        </div>
-                                    </div>
-                                    <div class="con2-user-q-txt">
-                                        공부가 지루하게 느껴질 때 읽으면 재미있게 배울 수 있는 책이 있을까요?
-                                    </div>
-                                </div>
-                                <figure class="mini-book-cover">
-                                    <img src="./img/mini-book-cover6.png" alt="미니 북 커버">
-                                </figure>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <script>
-                const con2cardlist = new Swiper('.con2-cardlist-wrap', {
-                    breakpoints: {
-                        100: {
-                            slidesPerView: 'auto',
-                        },
-                        769: {
-                            slidesPerView: 'auto',
-                        },
-                        1024: {
-                            slidesPerView: 'auto',
-                        }
-                    }
-                });
-            </script>
-        </div>
-    </section>
-    <!-- AI독파밍 -->
-    <section class="con3">
-        <div class="common-frame">
-            <div class="section-title">
-                <div class="section-title-wrap">
-                    <div class="section-maintitle">
-                        AI와 함께 읽는 나를 일으킬 책들
-                    </div>
-                    <div class="section-title-icn">
-                        <a href="#">
-                            <img src="./img/icn-arrow right.svg" alt="더보기 아이콘">
-                        </a>
+                <div class="foot-right">
+                    <div class="foot-list-2">
+                        <dl class="account">
+                            <dt class="stli">Account info</dt>
+                            <dd>글길은행 998877-66-554433<br br class="desktop-br">(예금주: 글길 주식회사)</dd>
+                        </dl>
+                        <table class="community-list">
+                            <caption>Community</caption>
+                            <tr class="community-title stli">
+                                <th colspan="2">커뮤니티</th>
+                            </tr>
+                            <tr class="community-info">
+                                <td>공지사항</td>
+                                <td>회원가입</td>
+                                <td>FAQ</td>
+                                <td>로그인</td>
+                                <td>상품 Q&A</td>
+                                <td>마이페이지</td>
+                                <td>글길의 책</td>
+                                <td>주문조회</td>
+                                <td>이벤트</td>
+                            </tr>
+                        </table>
+                        <div class="sns tap">
+                            <li><a href="#"><img src="./img-/selfhst_instagram.svg" alt="글길 인스타그램 바로가기"></a></li>
+                            <li><a href="#"><img src="./img-/selfhst_youtube.svg" alt="글길 유튜브  바로가기"></a></li>
+                        </div>
+                        <dl class="account tap">
+                            <dt class="stli">Account info</dt>
+                            <dd>글길은행 998877-66-554433<br class="desktop-br">(예금주: 글길 주식회사)</dd>
+                        </dl>
                     </div>
                 </div>
-                <div class="con2-subtitle">책의 핵심 정보만 쏙쏙 찾아주는 AI 독파밍</div>
             </div>
-            <div class="swiper con3-cardlist-wrap">
-                <ul class="con3-cardlist swiper-wrapper">
-                    <li class="swiper-slide" id="card-blue">
-                        <a href="#">
-                            <div class="con3-card-wrap">
-                                <div class="con3-card-badge">
-                                    <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
-                                    <span>이 책의 질문</span>
-                                </div>
-                                <div class="con3-card-title">
-                                    <h4>명화 속 오디세우스를
-                                        찾아볼까요?</h4>
-                                </div>
-                                <div class="con3-card-bk-cover">
-                                    <img src="./img/con3-card-bk-cover1.png" alt="카드 북커버">
-                                </div>
-                                <div class="con3-card-btn">
-                                    <img src="./img/con3-card-btn-icn.svg" alt="">
-                                    <span>AI와 함께 읽기</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="card-green">
-                        <a href="#">
-                            <div class="con3-card-wrap">
-                                <div class="con3-card-badge">
-                                    <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
-                                    <span>이 책의 질문</span>
-                                </div>
-                                <div class="con3-card-title">
-                                    <h4>당신이라면 어떻게 기억할까요?</h4>
-                                </div>
-                                <div class="con3-card-bk-cover">
-                                    <img src="./img/con3-card-bk-cover2.png" alt="카드 북커버">
-                                </div>
-                                <div class="con3-card-btn">
-                                    <img src="./img/con3-card-btn-icn.svg" alt="">
-                                    <span>AI와 함께 읽기</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="card-yellow">
-                        <a href="#">
-                            <div class="con3-card-wrap">
-                                <div class="con3-card-badge">
-                                    <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
-                                    <span>이 책의 질문</span>
-                                </div>
-                                <div class="con3-card-title">
-                                    <h4>니체가 말한 ‘초월’은
-                                        우리에게 어떤 의미일까?</h4>
-                                </div>
-                                <div class="con3-card-bk-cover">
-                                    <img src="./img/con3-card-bk-cover3.png" alt="카드 북커버">
-                                </div>
-                                <div class="con3-card-btn">
-                                    <img src="./img/con3-card-btn-icn.svg" alt="">
-                                    <span>AI와 함께 읽기</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="card-purple">
-                        <a href="#">
-                            <div class="con3-card-wrap">
-                                <div class="con3-card-badge">
-                                    <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
-                                    <span>이 책의 질문</span>
-                                </div>
-                                <div class="con3-card-title">
-                                    <h4>당신은 어떤
-                                        여정을 떠나고 싶나요?</h4>
-                                </div>
-                                <div class="con3-card-bk-cover">
-                                    <img src="./img/con3-card-bk-cover4.png" alt="카드 북커버">
-                                </div>
-                                <div class="con3-card-btn">
-                                    <img src="./img/con3-card-btn-icn.svg" alt="">
-                                    <span>AI와 함께 읽기</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="card-red">
-                        <a href="#">
-                            <div class="con3-card-wrap">
-                                <div class="con3-card-badge">
-                                    <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
-                                    <span>이 책의 질문</span>
-                                </div>
-                                <div class="con3-card-title">
-                                    <h4>우리는 정말
-                                        시간이 부족한 걸까?</h4>
-                                </div>
-                                <div class="con3-card-bk-cover">
-                                    <img src="./img/con3-card-bk-cover5.png" alt="카드 북커버">
-                                </div>
-                                <div class="con3-card-btn">
-                                    <img src="./img/con3-card-btn-icn.svg" alt="">
-                                    <span>AI와 함께 읽기</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="card-blue">
-                        <a href="#">
-                            <div class="con3-card-wrap">
-                                <div class="con3-card-badge">
-                                    <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
-                                    <span>이 책의 질문</span>
-                                </div>
-                                <div class="con3-card-title">
-                                    <h4>다른 마음이 공존할 때,
-                                        어떤 선택을 하게 될까?</h4>
-                                </div>
-                                <div class="con3-card-bk-cover">
-                                    <img src="./img/con3-card-bk-cover6.png" alt="카드 북커버">
-                                </div>
-                                <div class="con3-card-btn">
-                                    <img src="./img/con3-card-btn-icn.svg" alt="">
-                                    <span>AI와 함께 읽기</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="swiper-slide" id="card-scarlet">
-                        <a href="#">
-                            <div class="con3-card-wrap">
-                                <div class="con3-card-badge">
-                                    <img src="./img/con3-card-badge.svg" alt="독파밍 아이콘">
-                                    <span>이 책의 질문</span>
-                                </div>
-                                <div class="con3-card-title">
-                                    <h4>진정한 나를
-                                        어떻게 찾을까요?</h4>
-                                </div>
-                                <div class="con3-card-bk-cover">
-                                    <img src="./img/con3-card-bk-cover7.png" alt="카드 북커버">
-                                </div>
-                                <div class="con3-card-btn">
-                                    <img src="./img/con3-card-btn-icn.svg" alt="">
-                                    <span>AI와 함께 읽기</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+            <div class="foot-bottom tap">
+                <div class="copy tap stli">
+                    © 2026 GEUGIL Furniture. All Rights Reserved.<br>취업용도의 포트폴리오 홈페이지입니다.
+                </div>
             </div>
-            <script>
-                const con3cardlist = new Swiper('.con3-cardlist-wrap', {
-                    breakpoints: {
-                        100: {
-                            slidesPerView: 'auto',
-                        },
-                        769: {
-                            slidesPerView: 'auto',
-                        },
-                        1024: {
-                            slidesPerView: 'auto',
-                        }
-                    }
-                });
-            </script>
+            <div class="foot-bottom">
+                <div class="copy stli">
+                    © 2026 GEUGIL Furniture. All Rights Reserved.<br>취업용도의 포트폴리오 홈페이지입니다.
+                </div>
+                <div class="sns">
+                    <li><a href="#"><img src="./img/selfhst_instagram.svg" alt="글길 인스타그램 바로가기"></a></li>
+                    <li><a href="#"><img src="./img/selfhst_youtube.svg" alt="글길 유튜브  바로가기"></a></li>
+                </div>
+            </div>
         </div>
-    </section>
+    </footer>
 </body>
 
 </html>
