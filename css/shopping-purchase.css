@@ -220,16 +220,14 @@
     align-items: center;
     width: 100%;
     max-width: 100%;
-    margin-top: 2rem;
-    padding: 0;
 }
 
-.pc{display: flex;}
+.pc{display: block;}
 .pad{display: none;}
 .mo{display: none;}
 
 .st-banner figure {
-    margin: 0;
+    margin-top: 2rem;
     padding: 0;
     box-sizing: border-box;
     line-height: 0;
@@ -612,7 +610,7 @@
 }
 @media (max-width:1205px){
     .pc{display: none;}
-    .pad{display: flex;}
+    .pad{display: block;}
     .mo{display: none;}
 }
 
@@ -1236,5 +1234,5 @@
 @media (max-width:402px){
     .pc{display: none;}
     .pad{display: none;}
-    .mo{display: flex;}
+    .mo{display: block;}
 }
