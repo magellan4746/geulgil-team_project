@@ -184,12 +184,25 @@
     font-size: var(--fs-h3);
     font-weight: var(--fw2);
 }
-
+.book-intro-keepread{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.book-intro-keepread span{
+    font-weight: var(--fw2);
+}
+.book-intro-keepread img{
+    height: 1.5rem;
+}
+.intro-bttm-line{
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--black-200);
+}
 .book-intro-caption {
     margin-top: 2rem;
     color: var(--black-500);
     padding-bottom: 2rem;
-    border-bottom: 1px solid var(--black-200);
 }
 
 /* =========================
