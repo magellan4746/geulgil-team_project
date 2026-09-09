@@ -206,6 +206,57 @@
     padding-bottom: 2rem;
 }
 
+.stemp-banner{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.st-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pc{display: flex;}
+.pad{display: none;}
+.mo{display: none;}
+
+.st-banner figure {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 0;
+    vertical-align: top;
+}
+
+.st-banner-img,
+.st-banner-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.st-banner-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.st-banner-btn img {
+    display: block;
+    width: auto;
+    max-width: none;
+    height: auto;
+    flex-shrink: 0;
+}
 /* =========================
    전체 리뷰 영역
 ========================= */
@@ -559,6 +610,12 @@
     }
 
 }
+@media (max-width:1205px){
+    .pc{display: none;}
+    .pad{display: flex;}
+    .mo{display: none;}
+}
+
 
 /* 1025px ~ 1720px */
 @media screen and (min-width: 1025px) and (max-width: 1720px) {
@@ -644,7 +701,11 @@
         gap: 1rem;
     }
 }
-
+@media (max-width:1000px){
+    .pc{display: none;}
+    .pad{display: flex;}
+    .mo{display: none;}
+}
 @media(max-width:768px) {
     .shop-book-price {
         grid-template-columns: repeat(1, 1fr);
@@ -1171,4 +1232,9 @@
         box-sizing: border-box;
     }
 
+}
+@media (max-width:402px){
+    .pc{display: none;}
+    .pad{display: none;}
+    .mo{display: flex;}
 }
