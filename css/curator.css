@@ -139,8 +139,12 @@
 .section-title-wrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
 
+}
+.section-title-icn img{
+    height: 1.5rem;
 }
 
 .section-maintitle {
@@ -381,7 +385,7 @@
     
 
     .es-arrow {
-        height: 32px;
+        height: 1.5rem;
     }
 
     .es-bottom {
@@ -433,7 +437,7 @@
 @media(max-width:894px) {
     
 
-    .es-arrow {}
+
 
     .es-bottom {
         max-width: 600px;

@@ -252,7 +252,7 @@ button {
 .section-title-btn {
     display: inline-flex;
     align-items: center;
-    gap: 9px;
+    gap: 0.25rem;
 
     border: 0;
     padding: 0;
@@ -389,11 +389,19 @@ button {
 
 .bestseller-header {
     display: flex;
+    align-items: center;
     font-size: var(--fs-h4);
     font-weight: var(--fw2);
     margin-bottom: 2rem;
 }
-
+.bestseller-link{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.bestseller-link img{
+    height: 1.2rem;
+}
 .bestseller-period {
     display: flex;
     gap: var(--space-normal);
