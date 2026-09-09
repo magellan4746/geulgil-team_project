@@ -34,6 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.25rem;
 }
 
 /* 글길 에디터 추천 섹션 아래 영역 */
