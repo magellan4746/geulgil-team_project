@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.stemp-banner{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.st-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pc{display: flex;}
+.pad{display: none;}
+.mo{display: none;}
+
+.st-banner figure {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 0;
+    vertical-align: top;
+}
+
+.st-banner-img,
+.st-banner-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.st-banner-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.st-banner-btn img {
+    display: block;
+    width: auto;
+    max-width: none;
+    height: auto;
+    flex-shrink: 0;
+}
+
+@media (max-width:1205px){
+    .pc{display: none;}
+    .pad{display: flex;}
+    .mo{display: none;}
+}
+
+@media (max-width:1000px){
+    .pc{display: none;}
+    .pad{display: flex;}
+    .mo{display: none;}
+}
+
+@media (max-width:402px){
+    .pc{display: none;}
+    .pad{display: none;}
+    .mo{display: flex;}
+}
