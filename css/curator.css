@@ -39,8 +39,8 @@
 
 /* 글길 에디터 추천 섹션 아래 영역 */
 .es-bottom {
-    max-width: auto;
-    width: auto;
+    /* max-width: auto; */
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -389,15 +389,15 @@
         height: 1.5rem;
     }
 
-    .es-bottom {
+    /* .es-bottom {
         max-width: 1200px;
         margin: 0 auto;
-    }
+    } */
 
     .grid-list {
         max-width: auto;
         grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 6rem 16px;
+        gap: 6rem 1rem;
     }
 
     .grid-list-item figure img {
@@ -415,13 +415,13 @@
 }
 
 @media(max-width:1292px) {
-    .es-bottom {
+    /* .es-bottom {
         max-width: 803px;
-    }
+    } */
 
     .grid-list {
         max-width: auto;
-        gap: 6rem 14px;
+        gap: 6rem 1.2rem;
     }
 
     .grid-list-item figure img {
@@ -440,9 +440,9 @@
 
 
 
-    .es-bottom {
+    /* .es-bottom {
         max-width: 600px;
-    }
+    } */
 
     .grid-list {
         max-width: auto;
@@ -450,9 +450,9 @@
 }
 
 @media(max-width:700px) {
-    .es-bottom {
+    /* .es-bottom {
         max-width: 500px;
-    }
+    } */
 
     .grid-list {
         max-width: auto;
@@ -460,9 +460,9 @@
         gap: 6rem 12px;
     }
 
-    .grid-list {
+    /* .grid-list {
         max-width: 500px;
-    }
+    } */
 }
 @media(max-width:768px){
     
@@ -473,26 +473,26 @@
         font-size: var(--fs-h3);
     }
 
-    .es-bottom {
+    /* .es-bottom {
         max-width: 400px;
-    }
+    } */
 
     .grid-list {
         max-width: auto;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 6rem 8px;
+        gap: 6rem 0.5rem;
     }
 
     .grid-list {
-        max-width: 400px;
-        width: auto;
+        /* max-width: 400px; */
+        width: 100%;
     }
 }
 
 @media(max-width:478px) {
-    .es-bottom {
+    /* .es-bottom {
         max-width: 280px;
-    }
+    } */
 
     .grid-list {
         max-width: auto;
@@ -502,9 +502,9 @@
 }
 
 @media(max-width:360px) {
-    .es-bottom {
+    /* .es-bottom {
         max-width: 260px;
-    }
+    } */
 
     .grid-list {
         max-width: auto;
@@ -514,9 +514,9 @@
 }
 
 @media(max-width:344px) {
-    .es-bottom {
+    /* .es-bottom {
         max-width: 250px;
-    }
+    } */
 
     .grid-list {
         max-width: auto;
@@ -526,25 +526,25 @@
 }
 
 @media(max-width:320px) {
-    .es-bottom {
+    /* .es-bottom {
         max-width: 200px;
-    }
+    } */
 
     .grid-list {
         max-width: auto;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 6rem 8px;
+        gap: 6rem 80.5rem;
     }
 }
 
 @media(max-width:280px) {
-    .es-bottom {
+    /* .es-bottom {
         max-width: 200px;
-    }
+    } */
 
     .grid-list {
         max-width: auto;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 6rem 8px;
+        gap: 6rem 0.5rem;
     }
 }
