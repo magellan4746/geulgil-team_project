@@ -404,7 +404,7 @@ footer {
         display: flex;
         justify-content: center;
         text-align: center;
-        gap: 12px;
+        gap: 1rem;
     }
 
     .community-title {

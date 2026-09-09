@@ -100,7 +100,7 @@
 
     width: 100%;
 
-    gap: 10px;
+    gap: 0.6rem;
 
     color: #222;
 
@@ -137,8 +137,8 @@
 
 .category-image {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 7.25rem;
+    height: 7.25rem;
     object-fit: contain;
 
     transition:
@@ -169,8 +169,7 @@
 .category-name {
     display: block;
 
-    font-size: 14px;
-    font-weight: 500;
+    font-weight: var(--fw2);
     line-height: 1.4;
 
     white-space: nowrap;
@@ -267,9 +266,7 @@ button {
 .section-title {
     font-size: var(--fs-h4);
     line-height: 1.4;
-
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    font-weight: var(--fw2);
 }
 
 
@@ -297,7 +294,7 @@ button {
 
     grid-template-columns: repeat(5, minmax(0, 1fr));
 
-    gap: 40px;
+    gap: 2.5rem;
 }
 
 
@@ -356,8 +353,7 @@ button {
 
     line-height: 1.45;
 
-    font-weight: 600;
-    letter-spacing: -0.4px;
+    font-weight: var(--fw2);
 
     color: #202020;
 
@@ -366,12 +362,10 @@ button {
 }
 
 .book-author {
-    margin-top: 8px;
+    margin-top: 0.5rem;
 
-    font-size: 13px;
     line-height: 1.4;
 
-    font-weight: 400;
 
     color: #8b8b8b;
 }
@@ -769,7 +763,7 @@ button {
 
 
     .section-header {
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
     }
 
     .section-title {
@@ -796,7 +790,7 @@ button {
     /* 402px 기준 약 2개 노출 */
 
     .book-card {
-        flex: 0 0 166px;
+        flex: 0 0 10rem;
     }
 
 
@@ -848,7 +842,7 @@ button {
 
 
     .book-card {
-        flex-basis: 150px;
+        flex-basis: 9rem;
     }
 
 }
