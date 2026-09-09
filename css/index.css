@@ -116,8 +116,8 @@
 .category-image {
     display: block;
 
-    width: 100px;
-    height: 100px;
+    /* width: 100px; */
+    /* height: 100px; */
 
     flex-shrink: 0;
 
@@ -639,10 +639,10 @@ button {
     1025px에서는 크게,
     601px에 가까워질수록 작아짐
   */
-    .category-image {
+    /* .category-image {
         width: clamp(3rem, 7vw, 4.5rem);
         height: clamp(3rem, 7vw, 4.5rem);
-    }
+    } */
 
 
     .category-item {
@@ -718,10 +718,10 @@ button {
     모바일 화면이 작아지면
     아이콘도 자동으로 같이 작아짐
   */
-    .category-image {
+    /* .category-image {
         width: clamp(3rem, 15vw, 4rem);
         height: clamp(3rem, 15vw, 4rem);
-    }
+    } */
 
 
     .category-name {
