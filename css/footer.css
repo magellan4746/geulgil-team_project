@@ -197,7 +197,7 @@ footer {
         max-width: 100%;
     }
 
-    .coinfo-list.mo {
+    .footer-mo {
         display: none;
     }
 
@@ -335,7 +335,7 @@ footer {
         font-size: var(--fs-body1);
     }
 
-    .coinfo-list.mo {
+    .coinfo-list.footer-mo {
         display: none;
     }
 }
