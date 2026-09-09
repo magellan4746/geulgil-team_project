@@ -356,11 +356,9 @@
 }
 
 
-.review-buyer-stars {
-    color: #ddd;
+.review-buyer-stars img {
+    height: 1rem;
 
-    font-size: 21px;
-    letter-spacing: 1px;
 }
 
 
@@ -369,14 +367,14 @@
 ========================= */
 
 .review-write {
-    margin-top: 20px;
-    padding-left: 160px;
+    margin-top: 1.25rem;
+    padding-left: 10rem;
 }
 
 
 .review-write textarea {
     display: block;
-
+    box-sizing: border-box;
     width: 100%;
     height: 135px;
 
@@ -409,13 +407,13 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 25px;
-    padding-left: 20px;
+    margin-top: 1.25rem;
+    padding-left: 1.25rem;
 }
 
 
 .review-warning-btn {
-    padding: 10px 14px;
+    padding: 0.5rem 1rem;
 
     border: 1px solid #aaa;
     border-radius: 4px;
@@ -424,7 +422,6 @@
 
     color: #777;
 
-    font-size: 12px;
 
     cursor: pointer;
 }
@@ -434,7 +431,7 @@
     display: flex;
     align-items: center;
 
-    gap: 28px;
+    gap: 2rem;
 }
 
 
@@ -444,13 +441,12 @@
 
     gap: 7px;
 
-    font-size: 12px;
     color: #777;
 }
 
 
 .review-submit-btn {
-    padding: 12px 25px;
+    padding: 1rem 1rem;
 
     border: 0;
     border-radius: 3px;
@@ -458,7 +454,6 @@
     background: #87a66f;
     color: #fff;
 
-    font-size: 14px;
     font-weight: 600;
 
     cursor: pointer;
@@ -474,8 +469,8 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 90px;
-    padding: 0 20px 25px;
+    margin-top: 5.6rem;
+    padding: 0 1.25rem 1.5rem;
 
     border-bottom: 1px solid #999;
 }
@@ -486,7 +481,7 @@
     display: flex;
     align-items: center;
 
-    gap: 22px;
+    gap: 1.25rem;
 }
 
 
@@ -499,7 +494,6 @@
 
     color: #777;
 
-    font-size: 13px;
 
     cursor: pointer;
 }
@@ -517,7 +511,7 @@
 ========================= */
 
 .review-empty {
-    padding: 120px 20px;
+    padding: 7.5rem 1.25rem;
 
     text-align: center;
 
@@ -526,15 +520,13 @@
 
 
 .review-empty p {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 
-    font-size: 16px;
 }
 
 
 .review-empty strong {
-    font-size: 16px;
-    font-weight: 500;
+    font-weight: var(--fw2);
 }
 
 
@@ -735,17 +727,14 @@
 
     .review-buyer-rating {
         position: static;
-
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
         width: 100%;
         min-width: 0;
-
-        margin: 0;
-        padding: 20px;
+        margin-bottom: 1rem;
+        padding: 1.25rem;
     }
 
 
@@ -946,7 +935,7 @@
 
         width: 100%;
 
-        margin: 20px 0 0;
+        margin-bottom: 1rem;
         padding: 0;
     }
 
@@ -963,11 +952,7 @@
         font-weight: 700;
     }
 
-    .review-buyer-stars {
-        color: #ddd;
-
-        font-size: 15px;
-    }
+    
 
 
     /* 리뷰 작성 유의사항 */
@@ -979,7 +964,6 @@
 
         width: 100%;
 
-        margin-top: -39px;
         padding: 0;
     }
 
@@ -988,9 +972,9 @@
 
         justify-self: end;
 
-        padding: 6px 9px;
+        padding: 0.25rem 0.5rem;
 
-        font-size: 9px;
+        font-size: var(--fs-detail);
     }
 
 
@@ -1004,20 +988,19 @@
 
         width: 100%;
 
-        margin-top: 18px;
-        padding-top: 14px;
+        padding-top: 0.8rem;
 
-        border-top: 1px solid #aaa;
+        
     }
 
     .review-spoiler {
-        font-size: 9px;
+        font-size: var(--fs-detail);
     }
 
     .review-submit-btn {
-        padding: 8px 16px;
+        padding: 0.5rem 1rem;
 
-        font-size: 11px;
+        font-size: var(--fs-detail);
     }
 
 
@@ -1031,8 +1014,8 @@
 
         width: 100%;
 
-        margin-top: 26px;
-        padding: 0 0 12px;
+        margin-top: 1.25rem;
+        padding: 0 0 1rem;
 
         border-bottom: 1px solid #777;
     }
@@ -1040,20 +1023,20 @@
     .review-filter-left {
         display: flex;
 
-        gap: 8px;
+        gap: 0.5rem
     }
 
     .review-sort {
         display: flex;
 
-        gap: 6px;
+        gap: 0.5rem;
     }
 
     .review-filter-btn,
     .review-sort-btn {
         padding: 0;
 
-        font-size: 8px;
+        font-size: var(--fs-detail);
 
         white-space: nowrap;
     }
@@ -1067,19 +1050,19 @@
     }
 
     .review-empty {
-        padding: 80px 10px 60px;
+        padding: 5rem 0.625rem 3.75rem;
 
         text-align: center;
     }
 
     .review-empty p {
-        margin-bottom: 16px;
+        margin-bottom: 1rem;
 
-        font-size: 11px;
+        font-size: var(--fs-detail);
     }
 
     .review-empty strong {
-        font-size: 11px;
+        font-size: var(--fs-detail);
     }
 
 
@@ -1092,14 +1075,14 @@
 
 
     .review-item {
-        padding: 30px 20px;
+        padding: 2rem 1.5rem;
 
         border-bottom: 1px solid #ddd;
     }
 
 
     .review-item-stars {
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
 
         color: #0784ef;
 
