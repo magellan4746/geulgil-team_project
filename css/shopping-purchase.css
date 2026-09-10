@@ -184,29 +184,34 @@
     font-size: var(--fs-h3);
     font-weight: var(--fw2);
 }
-.book-intro-keepread{
+
+.book-intro-keepread {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 0.25rem;
 }
-.book-intro-keepread span{
+
+.book-intro-keepread span {
     font-weight: var(--fw2);
 }
-.book-intro-keepread img{
+
+.book-intro-keepread img {
     height: 1.5rem;
 }
-.intro-bttm-line{
+
+.intro-bttm-line {
     margin-top: 2rem;
     border-bottom: 1px solid var(--black-200);
 }
+
 .book-intro-caption {
     margin-top: 2rem;
     color: var(--black-500);
     padding-bottom: 2rem;
 }
 
-.stemp-banner{
+.stemp-banner {
     width: 100%;
     max-width: 100%;
     overflow: hidden;
@@ -214,7 +219,7 @@
     padding: 0;
 }
 
-.st-banner{
+.st-banner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,9 +227,17 @@
     max-width: 100%;
 }
 
-.stp-pc{display: block;}
-.stp-pad{display: none;}
-.stp-mo{display: none;}
+.stp-pc {
+    display: block;
+}
+
+.stp-pad {
+    display: none;
+}
+
+.stp-mo {
+    display: none;
+}
 
 .st-banner figure {
     margin-top: 2rem;
@@ -255,6 +268,7 @@
     height: auto;
     flex-shrink: 0;
 }
+
 /* =========================
    전체 리뷰 영역
 ========================= */
@@ -401,10 +415,12 @@
 
     min-width: 130px;
 }
-.review-stars>button img{
+
+.review-stars>button img {
     height: 3rem;
 
 }
+
 .review-buyer-label {
     margin-bottom: 14px;
 
@@ -592,8 +608,49 @@
     font-weight: var(--fw2);
 }
 
+.review-list {
+    order: 6;
+
+    width: 100%;
+}
+
+.review-item {
+    padding: 2rem 1.5rem;
+
+    border-bottom: 1px solid #ddd;
+}
 
 
+.review-item-stars {
+    margin-bottom: 1rem;
+
+    color: #0784ef;
+
+    font-size: 18px;
+}
+
+.review-item-stars span {
+    color: #ddd;
+}
+
+
+.review-item-spoiler {
+    display: inline-block;
+
+    margin-bottom: 10px;
+    padding: 0.25rem 0.5rem;
+
+    border-radius: 3px;
+
+    background: #eee;
+
+    font-size: var(--fs-detail);
+}
+
+
+.review-item-text {
+    line-height: 1.6;
+}
 
 
 @media(max-width:1076px) {
@@ -608,10 +665,19 @@
     }
 
 }
-@media (max-width:1205px){
-    .stp-pc{display: none;}
-    .stp-pad{display: block;}
-    .stp-mo{display: none;}
+
+@media (max-width:1205px) {
+    .stp-pc {
+        display: none;
+    }
+
+    .stp-pad {
+        display: block;
+    }
+
+    .stp-mo {
+        display: none;
+    }
 }
 
 
@@ -632,6 +698,7 @@
         flex-basis: clamp(90px, 8vw, 120px);
     }
 }
+
 @media(max-width:1024px) {
     .shop-book {
         margin-top: 10rem;
@@ -699,11 +766,21 @@
         gap: 1rem;
     }
 }
-@media (max-width:1000px){
-    .stp-pc{display: none;}
-    .stp-pad{display: block;}
-    .stp-mo{display: none;}
+
+@media (max-width:1000px) {
+    .stp-pc {
+        display: none;
+    }
+
+    .stp-pad {
+        display: block;
+    }
+
+    .stp-mo {
+        display: none;
+    }
 }
+
 @media(max-width:768px) {
     .shop-book-price {
         grid-template-columns: repeat(1, 1fr);
@@ -716,9 +793,10 @@
 
 
 }
+
 @media screen and (min-width: 601px) and (max-width: 1024px) {
 
-    
+
 
 
     /* 책 */
@@ -837,7 +915,7 @@
     .review-section {
         display: flex;
         flex-direction: column;
-       
+
     }
 
     /* =====================
@@ -1025,7 +1103,7 @@
         font-weight: 700;
     }
 
-    
+
 
 
     /* 리뷰 작성 유의사항 */
@@ -1063,7 +1141,7 @@
 
         padding-top: 0.8rem;
 
-        
+
     }
 
     .review-spoiler {
@@ -1171,8 +1249,6 @@
     .review-item-spoiler {
         display: inline-block;
 
-        margin-bottom: 10px;
-        padding: 4px 8px;
 
         border-radius: 3px;
 
@@ -1183,7 +1259,6 @@
 
 
     .review-item-text {
-        font-size: 14px;
         line-height: 1.6;
     }
 
@@ -1231,8 +1306,17 @@
     }
 
 }
-@media (max-width:402px){
-    .stp-pc{display: none;}
-    .stp-pad{display: none;}
-    .stp-mo{display: block;}
+
+@media (max-width:402px) {
+    .stp-pc {
+        display: none;
+    }
+
+    .stp-pad {
+        display: none;
+    }
+
+    .stp-mo {
+        display: block;
+    }
 }
